@@ -17,13 +17,13 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "Fernando Viana — Product Designer",
   description:
-    "Senior/Lead Product Designer. AI, Fintech e Healthcare. Frequentemente o primeiro designer da equipa.",
+    "Senior/Lead Product Designer. AI, Fintech, and Healthcare. Often the first designer on the team.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="pt"
+      lang="en"
       className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

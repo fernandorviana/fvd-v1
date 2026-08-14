@@ -4,7 +4,7 @@ import { projects } from "@/content/projects";
 
 export function FeaturedWork() {
   return (
-    <Section id="trabalho" label="01 — Trabalho">
+    <Section id="work" label="01 — Work">
       <ul className="divide-y divide-line border-y border-line">
         {projects.map((project) => (
           <li key={project.slug}>
@@ -24,7 +24,7 @@ export function FeaturedWork() {
               </p>
 
               <p className="mt-4 font-sans text-sm text-accent underline-offset-4 group-hover:underline">
-                Ver caso de estudo
+                View case study
               </p>
             </Link>
           </li>

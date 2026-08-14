@@ -7,8 +7,8 @@ type SectionProps = {
 };
 
 /**
- * Invólucro das secções: numeração/rótulo à esquerda, conteúdo à direita.
- * Dá o ritmo editorial sem impor decoração — o estilo fino vem a seguir.
+ * Section wrapper: numbered label on the left, content on the right.
+ * Sets the editorial rhythm without imposing decoration — fine styling comes next.
  */
 export function Section({ id, label, children }: SectionProps) {
   return (

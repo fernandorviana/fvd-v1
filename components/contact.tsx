@@ -8,10 +8,10 @@ const links = [
 
 export function Contact() {
   return (
-    <Section id="contacto" label="03 — Contacto">
+    <Section id="contact" label="03 — Contact">
       <div className="max-w-2xl">
         <h2 className="font-serif text-title">
-          Aberto a conversas sobre produto, AI e equipas em formação.
+          Open to conversations about product, AI, and teams taking shape.
         </h2>
 
         <ul className="mt-8 space-y-3 font-sans text-lg">

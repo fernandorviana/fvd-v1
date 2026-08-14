@@ -16,10 +16,10 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
     <main className="flex-1">
       <div className="mx-auto w-full max-w-3xl px-6 py-20 sm:py-28">
         <Link
-          href="/#trabalho"
+          href="/#work"
           className="font-sans text-xs uppercase tracking-[0.18em] text-muted underline-offset-4 hover:underline"
         >
-          ← Trabalho
+          ← Work
         </Link>
 
         <p className="mt-12 font-sans text-xs uppercase tracking-[0.18em] text-muted">
@@ -36,13 +36,12 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
 
         <div className="mt-16 space-y-6 border-t border-line pt-10 font-sans text-lg leading-relaxed text-muted">
           <p>
-            Placeholder do caso de estudo. Estrutura provável: contexto e
-            constrangimentos, o que estava partido, decisões de design, e
-            resultado.
+            Case study placeholder. Likely structure: context and
+            constraints, what was broken, design decisions, and outcome.
           </p>
           <p>
-            Espaço para imagens, antes/depois e artefactos de processo — a
-            definir quando escolhermos o formato de cada caso.
+            Space for images, before/afters, and process artifacts — to be
+            defined once we settle on the format for each case.
           </p>
         </div>
       </div>

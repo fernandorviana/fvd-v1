@@ -10,20 +10,20 @@ export function Hero() {
       </h1>
 
       <p className="mt-6 max-w-2xl font-sans text-lg leading-relaxed text-muted sm:text-xl">
-        Senior/Lead Product Designer com mais de 10 anos a construir produtos em
-        AI, Fintech e Healthcare — quase sempre como o primeiro designer da
-        equipa, a definir a prática de design a partir do zero.
+        Senior/Lead Product Designer with 10+ years building products in AI,
+        Fintech, and Healthcare — almost always as the first designer on the
+        team, setting up the design practice from scratch.
       </p>
 
       <nav className="mt-12 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm">
-        <a className="underline-offset-4 hover:underline" href="#trabalho">
-          Trabalho
+        <a className="underline-offset-4 hover:underline" href="#work">
+          Work
         </a>
-        <a className="underline-offset-4 hover:underline" href="#sobre">
-          Sobre
+        <a className="underline-offset-4 hover:underline" href="#about">
+          About
         </a>
-        <a className="underline-offset-4 hover:underline" href="#contacto">
-          Contacto
+        <a className="underline-offset-4 hover:underline" href="#contact">
+          Contact
         </a>
       </nav>
     </header>
