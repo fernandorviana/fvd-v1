@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/contact-form";
 import { Section } from "@/components/section";
 
 const links = [
@@ -26,6 +27,8 @@ export function Contact() {
             </li>
           ))}
         </ul>
+
+        <ContactForm />
       </div>
     </Section>
   );
