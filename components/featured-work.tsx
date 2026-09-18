@@ -13,7 +13,12 @@ export function FeaturedWork() {
               className="group block py-8 transition-colors hover:bg-black/[0.02]"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                <h3 className="font-serif text-title">{project.company}</h3>
+                <h3 className="font-serif text-title">
+                  {project.company}
+                  {project.track && (
+                    <span className="text-muted"> — {project.track}</span>
+                  )}
+                </h3>
                 <p className="font-sans text-xs uppercase tracking-[0.18em] text-muted">
                   {project.sector} · {project.years}
                 </p>
