@@ -1,7 +1,10 @@
 import type { CaseStudy } from "./case-types";
+import { upvioPlatform } from "./cases/upvio-platform";
 
 /** Registry of written cases. Later: try Casa Digital first, fall back to these. */
-const cases: Record<string, CaseStudy> = {};
+const cases: Record<string, CaseStudy> = {
+  [upvioPlatform.slug]: upvioPlatform,
+};
 
 export async function getCase(slug: string): Promise<CaseStudy | undefined> {
   return cases[slug];

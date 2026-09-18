@@ -1,5 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readdirSync } from "node:fs";
+import type { CaseStudy } from "../content/case-types.ts";
 import { groupSections } from "../content/group-sections.ts";
 import { projects } from "../content/projects.ts";
 
@@ -37,4 +39,39 @@ test("projects list the three Upvio cases first, with the confirmed role", () =>
 test("project slugs are unique", () => {
   const slugs = projects.map((p) => p.slug);
   assert.equal(new Set(slugs).size, slugs.length);
+});
+
+const caseDir = new URL("../content/cases/", import.meta.url);
+
+async function loadCases(): Promise<CaseStudy[]> {
+  const files = readdirSync(caseDir).filter((file) => file.endsWith(".ts"));
+  const modules = await Promise.all(files.map((file) => import(new URL(file, caseDir).href)));
+  return modules.flatMap((mod) => Object.values(mod) as CaseStudy[]);
+}
+
+test("the Upvio Platform case exists", async () => {
+  const cases = await loadCases();
+  assert.ok(cases.some((c) => c.slug === "upvio-platform"));
+});
+
+test("every case matches a project and has well-formed sections", async () => {
+  for (const c of await loadCases()) {
+    assert.ok(projects.some((p) => p.slug === c.slug), `${c.slug} has no project entry`);
+
+    const sections = groupSections(c.blocks);
+    sections.forEach((section, i) => {
+      const expected = String(i + 1).padStart(2, "0") + " — ";
+      assert.ok(section.label.startsWith(expected), `${c.slug}: "${section.label}" should start with "${expected}"`);
+    });
+  }
+});
+
+test("internal links point to existing projects", async () => {
+  for (const c of await loadCases()) {
+    for (const block of c.blocks) {
+      if (block.type !== "link" || !block.href.startsWith("/work/")) continue;
+      const slug = block.href.replace("/work/", "");
+      assert.ok(projects.some((p) => p.slug === slug), `${c.slug}: broken link ${block.href}`);
+    }
+  }
 });
