@@ -91,7 +91,7 @@ No diagram components are built in this iteration; the diagram slots render as p
 - Role: Founding Designer, Head of Design
 - Timeline: Jan 2023 — Mar 2025
 - Scope: Design system, UX architecture, 0→1 features, research
-- Team: Solo designer, 3 engineers, direct line to C-level
+- Team: Solo designer, 4–5 engineers, direct line to C-level
 
 **Stats**
 - `8`: product areas designed from zero or rebuilt (to be confirmed by Fernando)
@@ -104,7 +104,7 @@ No diagram components are built in this iteration; the diagram slots render as p
 3. **03 — Foundations**: design system (tokens, component library, used everywhere, including later AI surfaces); new navigation and mental model. Image slot: `figma`, design system overview, `wide`. Diagram slot: IA before → after.
 4. **04 — Building the platform**: features grouped by journey. Clinician workflow (notes, records, telehealth); patient engagement (portal, forms, messaging); organisation (roles, teams, permissions). One `figma` image slot per journey. The deep-dive feature is still undecided; the section is written so one journey can later be expanded.
 5. **05 — The scheduling problem**: short bridge paragraph, linking to `/work/upvio-scheduling`.
-6. **06 — Process & collaboration**: working solo with 3 engineers and C-level stakeholders (CEO, CTO, CMO, Growth, Compliance & Support, Sales); wireframes to speed decisions; guiding developers; balancing visual expectations from the CEO and CMO with feature delivery; research (interviews, forms); website and product story. A brief mention of the short-term asset designer.
+6. **06 — Process & collaboration**: working solo with 4 engineers (5 at several points) and C-level stakeholders (CEO, CTO, CMO, Growth, Compliance & Support, Sales); wireframes to speed decisions; guiding developers; balancing visual expectations from the CEO and CMO with feature delivery; research (interviews, forms); website and product story. A brief mention of the short-term asset designer.
 7. **07 — Outcomes**: a coherent platform instead of isolated functions; foundations that later carried the AI layer; enterprise clients and investors. Metric placeholders.
 8. **08 — Reflection**: the cost of a large vertically integrated platform (the company later split it into APIs), told from a design perspective. Draft copy, to be reviewed by Fernando.
 

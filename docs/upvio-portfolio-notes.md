@@ -270,7 +270,7 @@ Human Insights AI:
 
 - **Title & dates:** Founding Designer, Head of Design · Jan 2023 — Mar 2025.
 - **Upvio is split into 3 case studies**, listed as independent entries: Platform & Foundations (`upvio-platform`), Scheduling & Resource Model (`upvio-scheduling`), Human Insights AI (`upvio-human-insights`, Vitals + Empathic together).
-- **Team:** sole designer throughout. A second designer (asset creation) helped only briefly, following the visual line already set. Worked with 3 engineers and directly with stakeholders: CEO, CTO, CMO, Head of Growth, Head of Compliance & Support, and occasionally the Sales Director.
+- **Team:** sole designer throughout. A second designer (asset creation) helped only briefly, following the visual line already set. Worked with 4 engineers (5 at several different points) and directly with stakeholders: CEO, CTO, CMO, Head of Growth, Head of Compliance & Support, and occasionally the Sales Director.
 - **Emotional AI (for the AI case):** worked directly with an external engineer building the emotional AI. Did the design and gave him implementation guidelines.
 - **Foundations vs. features:** built a solid design system base as fast as possible so features could ship, then grew it component by component as needed. The early phase meant heavy workload, organisation and juggling: wireframes to speed up decisions and UX study, guiding developers, satisfying the CEO and CMO visually, and shipping new features and changes to existing ones in parallel.
 - **Metrics:** some numbers exist, including one enterprise client with millions of indirect users (name uncertain; possibly "Blue Rythm"). Unconfirmed, so keep as a placeholder until verified.
