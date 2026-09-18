@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readdirSync } from "node:fs";
 import type { CaseStudy } from "../content/case-types.ts";
 import { groupSections } from "../content/group-sections.ts";
+import { getCase } from "../content/get-case.ts";
 import { projects } from "../content/projects.ts";
 
 test("groupSections nests blocks under the section above them", () => {
@@ -43,10 +44,22 @@ test("project slugs are unique", () => {
 
 const caseDir = new URL("../content/cases/", import.meta.url);
 
-async function loadCases(): Promise<CaseStudy[]> {
+type CaseFile = { file: string; case: CaseStudy };
+
+/** Loads every case, keeping the filename it came from so slug/filename can be cross-checked. */
+async function loadCaseFiles(): Promise<CaseFile[]> {
   const files = readdirSync(caseDir).filter((file) => file.endsWith(".ts"));
-  const modules = await Promise.all(files.map((file) => import(new URL(file, caseDir).href)));
-  return modules.flatMap((mod) => Object.values(mod) as CaseStudy[]);
+  const perFile = await Promise.all(
+    files.map(async (file) => {
+      const mod = await import(new URL(file, caseDir).href);
+      return (Object.values(mod) as CaseStudy[]).map((c) => ({ file, case: c }));
+    }),
+  );
+  return perFile.flat();
+}
+
+async function loadCases(): Promise<CaseStudy[]> {
+  return (await loadCaseFiles()).map((entry) => entry.case);
 }
 
 test("the Upvio Platform case exists", async () => {
@@ -73,5 +86,18 @@ test("internal links point to existing projects", async () => {
       const slug = block.href.replace("/work/", "");
       assert.ok(projects.some((p) => p.slug === slug), `${c.slug}: broken link ${block.href}`);
     }
+  }
+});
+
+test("every case file is registered in get-case.ts", async () => {
+  for (const c of await loadCases()) {
+    assert.equal(await getCase(c.slug), c, `${c.slug} is not registered in content/get-case.ts`);
+  }
+});
+
+test("each case file's slug matches its filename", async () => {
+  for (const { file, case: c } of await loadCaseFiles()) {
+    const expectedSlug = file.replace(/\.ts$/, "");
+    assert.equal(c.slug, expectedSlug, `${file} exports a case with slug "${c.slug}"`);
   }
 });

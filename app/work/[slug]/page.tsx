@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CaseBlocks } from "@/components/case/case-blocks";
@@ -10,6 +11,20 @@ import { getProject, projects } from "@/content/projects";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps<"/work/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProject(slug);
+
+  if (!project) return {};
+
+  const caseStudy = await getCase(slug);
+
+  return {
+    title: `${project.title} — Fernando Viana`,
+    description: caseStudy?.subtitle ?? project.summary,
+  };
 }
 
 export default async function ProjectPage({ params }: PageProps<"/work/[slug]">) {

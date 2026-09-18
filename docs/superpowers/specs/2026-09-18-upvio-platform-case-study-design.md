@@ -39,8 +39,9 @@ type CaseBlock =
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
   | { type: "callout"; text: string }                       // a key design decision
+  | { type: "link"; href: string; text: string }
   | { type: "image"; src?: string; alt: string; caption: string;
-      width: "text" | "wide"; source: "figma" | "screenshot"; placeholder?: boolean }
+      width: "text" | "wide"; source: "figma" | "screenshot" }
   | { type: "diagram"; id: DiagramId; caption: string };    // DiagramId maps to an SVG component
 
 type Stat = { value: string; label: string; placeholder?: boolean };
@@ -58,7 +59,8 @@ type CaseStudy = {
 
 ### Placeholders
 
-- An `image` with no `src`, and any item marked `placeholder: true`, renders in **development** as a dashed box labelled with its source and caption (e.g. `FIGMA — Guided service setup flow`).
+- An `image` block has no `placeholder` field: a missing `src` is itself the placeholder marker. Such a block renders in **development** as a dashed box labelled with its source and caption (e.g. `FIGMA — Guided service setup flow`).
+- A `stat` marked `placeholder: true` renders the same way — visible in development, labelled `PLACEHOLDER —`.
 - In **production** these placeholders are **not rendered**, so a partially filled case can ship safely.
 - A diagram whose component doesn't exist yet counts as a placeholder.
 

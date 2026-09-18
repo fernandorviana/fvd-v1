@@ -23,15 +23,15 @@ function Block({ block }: { block: CaseBlock }) {
       );
     case "callout":
       return (
-        <blockquote className="max-w-[40ch] border-l-2 border-accent pl-6 font-serif text-title">
+        <p className="max-w-[40ch] border-l-2 border-accent pl-6 font-serif text-title">
           {block.text}
-        </blockquote>
+        </p>
       );
     case "link":
       return (
         <p>
           <Link href={block.href} className="font-sans text-sm text-accent underline-offset-4 hover:underline">
-            {block.text} →
+            {block.text} <span aria-hidden="true">→</span>
           </Link>
         </p>
       );
