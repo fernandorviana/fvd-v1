@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   title: "Fernando Viana — Product Designer",
   description:
     "Senior/Lead Product Designer. AI, Fintech, and Healthcare. Often the first designer on the team.",
+  // Keep search engines out while the site is password-protected.
+  robots: process.env.SITE_PASSWORD ? { index: false, follow: false } : undefined,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
