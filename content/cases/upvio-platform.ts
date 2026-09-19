@@ -8,7 +8,7 @@ export const upvioPlatform: CaseStudy = {
     role: "Founding Designer, Head of Design",
     timeline: "Jan 2023 — Mar 2025",
     scope: "Design system, UX architecture, 0→1 features, research",
-    team: "Solo designer, 4–5 engineers, direct line to C-level",
+    team: "Solo designer, 3–5 engineers, direct line to C-level",
   },
   stats: [
     { value: "8", label: "Product areas designed from zero or rebuilt" },
@@ -124,7 +124,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "06 — Process", title: "One designer, many stakeholders" },
     {
       type: "paragraph",
-      text: "I was the only designer, working with four engineers (five at several points) and directly with the CEO, CTO, CMO, Head of Growth, Head of Compliance & Support and, at times, the Sales Director. For a short period a second designer helped produce assets within the visual language I had set.",
+      text: "I was the only designer, working with an engineering team that grew from three to five, four for most of my time, and directly with the CEO, CTO, CMO, Head of Growth, Head of Compliance & Support and, at times, the Sales Director. For a short period a second designer helped produce assets within the visual language I had set.",
     },
     {
       type: "paragraph",
