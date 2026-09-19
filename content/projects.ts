@@ -1,6 +1,8 @@
 export type Project = {
   slug: string;
   company: string;
+  /** Distinguishes several cases from the same company, e.g. "Platform & Foundations". */
+  track?: string;
   title: string;
   sector: "AI" | "Fintech" | "Healthcare";
   role: string;
@@ -12,14 +14,37 @@ export type Project = {
 /** Placeholder: content to refine once each case's narrative is locked in. */
 export const projects: Project[] = [
   {
-    slug: "upvio-ai",
+    slug: "upvio-platform",
     company: "Upvio AI",
-    title: "Placeholder — case study title",
+    track: "Platform & Foundations",
+    title: "Turning a capable engine into a coherent clinical platform",
     sector: "Healthcare",
-    role: "First designer · Lead Product Designer",
-    years: "2023 — present",
+    role: "Founding Designer · Head of Design",
+    years: "Jan 2023 — Mar 2025",
     summary:
-      "One line on the problem, the design decision, and the measurable impact.",
+      "As the first designer, I built Upvio's design foundations and redesigned the core of a multi-clinic healthcare platform.",
+  },
+  {
+    slug: "upvio-scheduling",
+    company: "Upvio AI",
+    track: "Scheduling & Resource Model",
+    title: "A scheduling model that makes invalid bookings impossible",
+    sector: "Healthcare",
+    role: "Founding Designer · Head of Design",
+    years: "Jan 2023 — Mar 2025",
+    summary:
+      "I redesigned how services, locations, staff and schedules depend on each other, bringing configuration errors close to zero.",
+  },
+  {
+    slug: "upvio-human-insights",
+    company: "Upvio AI",
+    track: "Human Insights AI",
+    title: "Turning multimodal AI research into tools clinicians trust",
+    sector: "Healthcare",
+    role: "Founding Designer · Head of Design",
+    years: "Jan 2023 — Mar 2025",
+    summary:
+      "I turned Vitals AI and Empathic AI from technology without a product into transparent tools inside clinical workflows.",
   },
   {
     slug: "automaise",

@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/work/upvio-ai",
+        destination: "/work/upvio-platform",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
