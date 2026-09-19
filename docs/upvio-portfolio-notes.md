@@ -276,3 +276,13 @@ Human Insights AI:
 - **Metrics:** some numbers exist, including one enterprise client with millions of indirect users (name uncertain; possibly "Blue Rythm"). Unconfirmed, so keep as a placeholder until verified.
 - **"Before" screenshots:** possibly a few; to be found.
 - **Platform deep-dive feature:** undecided. Scheduling and AI integration were the strongest stories but live in their own cases.
+
+### Scheduling case (confirmed)
+
+- **Sources:** Perplexity-generated docs (`upvio-resource-scheduling-domain-model.md`, `upvio-case-study-final.md`, `upvio-scheduling-domain-diagram.md`). Their "inspired by Microsoft Bookings / Dynamics 365" and generic lessons were **not** confirmed and are not used.
+- **Authorship:** Fernando conceived the domain model himself and took it to the CTO and engineers, who implemented it.
+- **Before:** scheduling was poor. He added features and improved the UX, but there was no model at all: a booking could be made with just a time and a doctor, or with just a client.
+- **Key insight / hardest part:** the team kept trying to fix scheduling settings with UI. He tried every UI route too, and none brought significant improvement. The real fix was UX plus the relational domain. Communicating this to the team and convincing them was hard.
+- **Benchmark:** looked at several scheduling tools; which ones is unconfirmed. Copy says "from clinical practice software to general booking products", with no names.
+- **Documentation:** the written model helped engineers who joined later (the team changed over time).
+- **Metrics:** "configuration errors close to zero" is confirmed (qualitative). Setup time and support time numbers exist but haven't been provided yet, so they are placeholders.
