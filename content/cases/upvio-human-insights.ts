@@ -12,7 +12,7 @@ export const upvioHumanInsights: CaseStudy = {
   },
   stats: [
     { value: "2", label: "AI capabilities shipped to production: Vitals and Empathic" },
-    { value: "[N]", label: "Interviews with clinicians, clinic owners and front-desk staff", placeholder: true },
+    { value: "5", label: "Interviews across practitioner, management and front-desk roles" },
     { value: "[N]", label: "Clinics using the AI features", placeholder: true },
   ],
   blocks: [
@@ -29,7 +29,11 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "02 — Research", title: "What clinicians actually want help with" },
     {
       type: "paragraph",
-      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
+      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran five interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. Its founder is also a clinician, so I interviewed her several times and kept a line open to her for the questions that came up later, which turned a study into continuous access to a real practice. The clinic was young, well organised and large enough that I could reach people in very different roles.",
+    },
+    {
+      type: "paragraph",
+      text: "That wasn't the only method. I also ran around half a dozen guided sessions with freelance clinicians, watching them work through the app, the designs and the prototypes, and surveyed users about how they were using the product. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
     },
     { type: "paragraph", text: "The findings pointed somewhere other than where the technology was pointing:" },
     {
