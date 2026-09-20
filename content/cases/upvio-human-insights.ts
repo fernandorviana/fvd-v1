@@ -69,7 +69,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. In mental health both arrive only once the session is over. What matters in the room is the person in it.",
+      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. It never volunteers any of it: during a consultation it answers only if the clinician asks, and in therapy its reading of the session waits until the session is over. What matters in that hour is the person in the room.",
     },
     { type: "diagram", id: "ai-around-the-consultation", caption: "Where AI belongs: before, during and after the consultation" },
     { type: "paragraph", text: "Four principles held both halves together:" },
@@ -83,7 +83,21 @@ export const upvioHumanInsights: CaseStudy = {
       ],
     },
 
-    { type: "section", label: "04 — Vitals AI", title: "A check-up that travels" },
+    { type: "section", label: "04 — The layer, and a choice", title: "One layer, two audiences" },
+    {
+      type: "paragraph",
+      text: "Vitals AI and Empathic AI point at different practices: vitals at general medicine, emotional signals at mental health. Human Insights AI was the layer above them, living inside the platform and fed mostly by what those two could read, especially in the parts no one else was doing.",
+    },
+    {
+      type: "paragraph",
+      text: "That layer was meant to do more than notes and templates. Reading a consultation well enough produces structure, and structure is what lets software help a clinician think, including about a diagnosis. Always as assistance, only when asked for, never the protagonist.",
+    },
+    {
+      type: "paragraph",
+      text: "Which raised the strategic question I spent much of this work on: aim the platform at mental health, where most of our customers were, or keep it general enough for every kind of practice. The choice reached everything, from the language in the interface to which signals were worth surfacing at all. Underneath it we kept a cheaper option open, which was selling the two capabilities as standalone APIs. That is the path the company eventually took.",
+    },
+
+    { type: "section", label: "05 — Vitals AI", title: "A check-up that travels" },
     {
       type: "paragraph",
       text: "I designed the product layer around the existing technology: where a scan happens, how the readings appear during a remote consultation, how they land in the patient record, and how they are reviewed afterwards. The readings carry their own uncertainty, and they sit beside the rest of the record rather than in a separate AI widget.",
@@ -100,7 +114,7 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "05 — Documentation", title: "The paperwork layer" },
+    { type: "section", label: "06 — Documentation", title: "The paperwork layer" },
     {
       type: "paragraph",
       text: "This is where the research pointed, so this is where most of the design went. The flow runs from the patient's consent, through recording and whatever the clinician jots down, to a transcript after the appointment, a draft in the template they chose, and a version they review and sign off. From the same material come referrals and reports, markers for the moments a therapist wants to find again, a patient-facing summary, and a recap that brings back the last session before the next one starts.",
@@ -117,13 +131,13 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "06 — Demo data", title: "Showing clinical AI without using real patients" },
+    { type: "section", label: "07 — Demo data", title: "Showing clinical AI without using real patients" },
     {
       type: "paragraph",
       text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a client and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would actually work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
     },
 
-    { type: "section", label: "07 — Empathic AI", title: "A second set of eyes on the session" },
+    { type: "section", label: "08 — Empathic AI", title: "A second set of eyes on the session" },
     {
       type: "paragraph",
       text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. It was never only a faster route to notes. Reading tone, expression and emotional shifts is clinical information, and I designed it as support for the clinician's judgement.",
@@ -134,7 +148,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. And in therapy it waits: nothing surfaces until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
+      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. And it waits: in a therapy session nothing surfaces until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
     },
     {
       type: "paragraph",
@@ -148,7 +162,7 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "08 — Outcomes", title: "In production, and then in pieces" },
+    { type: "section", label: "09 — Outcomes", title: "In production, and then in pieces" },
     {
       type: "paragraph",
       text: "Vitals AI shipped to production, and Empathic AI followed. By the time I left, the University of Florida was evaluating and researching Vitals AI, with Empathic AI next in line, while we were still designing and implementing the wider layer.",
@@ -158,7 +172,7 @@ export const upvioHumanInsights: CaseStudy = {
       text: "Upvio later split the platform up and sold these capabilities as APIs for other products to build on. That the capability could stand on its own was the point of designing it that way, though I would rather it had done both: a product of our own and a building block for others. The Human Insights work now lives as the building block.",
     },
 
-    { type: "section", label: "09 — What I learned", title: "Design ahead of delivery" },
+    { type: "section", label: "10 — What I learned", title: "Design ahead of delivery" },
     {
       type: "list",
       items: [

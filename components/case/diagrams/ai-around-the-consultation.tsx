@@ -12,7 +12,7 @@ const stages: Stage[] = [
   },
   {
     title: "During",
-    items: ["Nothing between clinician and patient", "Signals captured quietly, shown later"],
+    items: ["Nothing between clinician and patient", "Signals captured quietly", "Speaks only if asked"],
     quiet: true,
   },
   {
