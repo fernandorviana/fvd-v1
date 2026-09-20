@@ -29,7 +29,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "02 — Research", title: "What clinicians actually want help with" },
     {
       type: "paragraph",
-      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. In parallel I studied how other products in the space handled clinical documentation and AI: Jane, Carepatron, PowerDiary and Autonotes.",
+      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
     },
     { type: "paragraph", text: "The findings pointed somewhere other than where the technology was pointing:" },
     {
@@ -69,7 +69,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. Both arrive after the session by default, and during one the AI only speaks when the clinician asks. What matters in the room is the person in it.",
+      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. In mental health both arrive only once the session is over. What matters in the room is the person in it.",
     },
     { type: "diagram", id: "ai-around-the-consultation", caption: "Where AI belongs: before, during and after the consultation" },
     { type: "paragraph", text: "Four principles held both halves together:" },
@@ -103,7 +103,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "05 — Documentation", title: "The paperwork layer" },
     {
       type: "paragraph",
-      text: "This is where the research pointed, so this is where most of the design went: a transcript turned into a chosen template, structured progress notes, referrals and reports generated from what was discussed, markers for the moments a therapist wants to find again, and a summary that brings back the last session before the next one starts.",
+      text: "This is where the research pointed, so this is where most of the design went. The flow runs from the patient's consent, through recording and whatever the clinician jots down, to a transcript after the appointment, a draft in the template they chose, and a version they review and sign off. From the same material come referrals and reports, markers for the moments a therapist wants to find again, a patient-facing summary, and a recap that brings back the last session before the next one starts.",
     },
     {
       type: "paragraph",
@@ -134,7 +134,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. By default it waits until the session is over, and during a session it only speaks when asked.",
+      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. And in therapy it waits: nothing surfaces until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
     },
     {
       type: "paragraph",
