@@ -3,7 +3,7 @@ import type { CaseStudy } from "../case-types";
 export const upvioHumanInsights: CaseStudy = {
   slug: "upvio-human-insights",
   subtitle:
-    "Upvio had multimodal AI technology and no product around it. I ran the research with clinicians, clinic owners and front-desk staff, and designed a Human Insights AI layer that takes on the documentation clinicians dread and steps back when the consultation matters.",
+    "Upvio had multimodal AI that could read vital signs from a camera, and no product around it. I turned it into two things: a check-up that works wherever the patient is, and an AI layer that takes documentation off the clinician's desk without getting in the way of the session.",
   facts: {
     role: "Founding Designer, Head of Design",
     timeline: "Jan 2023 — Mar 2025",
@@ -50,17 +50,29 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "03 — The thesis", title: "Help with the paperwork, not with the listening" },
+    { type: "section", label: "03 — Two problems", title: "A measurement, and a workload" },
+    {
+      type: "paragraph",
+      text: "The research and the technology pointed at two different problems, and I designed for both rather than folding one into the other.",
+    },
+    {
+      type: "paragraph",
+      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health, which is why we planned it for general practice and triage as much as for therapy, and why it could stand on its own as a capability another product might buy.",
+    },
+    {
+      type: "paragraph",
+      text: "The second is a workload. Clinicians don't want help with listening to a patient; they want their paperwork back.",
+    },
     {
       type: "callout",
       text: "AI takes the paperwork. During the consultation, it gets out of the way.",
     },
     {
       type: "paragraph",
-      text: "That decided the shape of everything else. AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. It would offer observations and diagnostic suggestions drawn from the session, but afterwards. During the consultation, what matters is the connection with the person in the room.",
+      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. It would offer observations and diagnostic suggestions drawn from the session, but afterwards. During the consultation, what matters is the connection with the person in the room.",
     },
     { type: "diagram", id: "ai-around-the-consultation", caption: "Where AI belongs: before, during and after the consultation" },
-    { type: "paragraph", text: "Four principles held the design together:" },
+    { type: "paragraph", text: "Four principles held both halves together:" },
     {
       type: "list",
       items: [
@@ -71,10 +83,14 @@ export const upvioHumanInsights: CaseStudy = {
       ],
     },
 
-    { type: "section", label: "04 — Vitals AI", title: "From signal to something a clinician can use" },
+    { type: "section", label: "04 — Vitals AI", title: "A check-up that travels" },
     {
       type: "paragraph",
       text: "I designed the product layer around the existing technology: where a scan happens, how the readings appear during a remote consultation, how they land in the patient record, and how they are reviewed afterwards. The readings carry their own uncertainty, and they sit beside the rest of the record rather than in a separate AI widget.",
+    },
+    {
+      type: "paragraph",
+      text: "Because the scan needs nothing but a camera and a moment, it fits wherever a check-up is useful: taken by the patient before an appointment so the clinician starts with numbers already in hand, taken during a telehealth consultation, or repeated between visits to follow someone over time. That is also what made it portable beyond our own platform.",
     },
     {
       type: "image",
@@ -131,7 +147,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Upvio later split the platform up and sold these capabilities as APIs for other products to build on. The Human Insights work now lives as building blocks rather than as one application.",
+      text: "Upvio later split the platform up and sold these capabilities as APIs for other products to build on. That the capability could stand on its own was the point of designing it that way, though I would rather it had done both: a product of our own and a building block for others. The Human Insights work now lives as the building block.",
     },
 
     { type: "section", label: "09 — What I learned", title: "Design ahead of delivery" },
