@@ -29,7 +29,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "02 — Research", title: "What clinicians actually want help with" },
     {
       type: "paragraph",
-      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
+      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
     },
     { type: "paragraph", text: "The findings pointed somewhere other than where the technology was pointing:" },
     {
