@@ -286,3 +286,15 @@ Human Insights AI:
 - **Benchmark:** looked at several scheduling tools; which ones is unconfirmed. Copy says "from clinical practice software to general booking products", with no names.
 - **Documentation:** the written model helped engineers who joined later (the team changed over time).
 - **Metrics:** "configuration errors close to zero" is confirmed (qualitative). Setup time and support time numbers exist but haven't been provided yet, so they are placeholders.
+
+### Human Insights AI case (confirmed)
+
+- **Research authorship:** Fernando ran the research, the interview guide and the interviews. A colleague only helped record and organise the material in Notion; she is not mentioned anywhere on the site.
+- **Source material:** Notion export (interview guide for practitioner/manager/front desk; three interviews at a multidisciplinary clinic — 20 employees, ~80 practitioners, kept anonymous on the site; research notes with personas, jobs, pains and proposed AI solution; competitor analysis of Jane, Carepatron, PowerDiary and Autonotes; "Video Call AI: demos" with scripted personas and three consultations for demo data; dashboards; proposal KPIs; design QA backlog).
+- **Design system name:** Australis (now named in the Platform case).
+- **Thesis:** AI takes the protocol documentation clinicians dislike (notes, referrals, prescriptions, exam requests, reports) and gets out of the way during the consultation. Diagnostic suggestions come after the session. The clinician always has control.
+- **Key research findings:** paper notebooks and unreadable old notes; typing breaks therapeutic silence; expression analysis wanted as a post-session report, not live; clinic owners aggregating numbers by hand.
+- **Status:** Vitals AI shipped to production, Empathic AI followed. Documentation, assisted diagnosis and the wider AI integration were fully researched and designed but only partly implemented; the company was weighing the investment when the collaboration ended.
+- **University of Florida:** was evaluating and researching Vitals AI when he left, with Empathic AI next.
+- **Empathic AI:** built by an external engineer; Fernando did the design and gave implementation guidelines directly.
+- **Lesson:** design ran far ahead of delivery capacity; some designed work was never built as designed.
