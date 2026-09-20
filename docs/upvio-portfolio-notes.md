@@ -289,7 +289,7 @@ Human Insights AI:
 
 ### Human Insights AI case (confirmed)
 
-- **Research authorship:** Fernando ran the research, the interview guide and the interviews. A colleague only helped record and organise the material in Notion; she is not mentioned anywhere on the site.
+- **Research authorship:** Fernando did all of it — the research, the interview guide, the interviews, the synthesis and the competitor analysis. Never frame any of this work as shared or assisted, in the case studies or in these notes.
 - **Source material:** Notion export (interview guide for practitioner/manager/front desk; three interviews at a multidisciplinary clinic — 20 employees, ~80 practitioners, kept anonymous on the site; research notes with personas, jobs, pains and proposed AI solution; competitor analysis of Jane, Carepatron, PowerDiary and Autonotes; "Video Call AI: demos" with scripted personas and three consultations for demo data; dashboards; proposal KPIs; design QA backlog).
 - **Design system name:** Australis (now named in the Platform case).
 - **Two problems, not one:** (1) Vitals AI is a measurement capability — the pre-consultation check-up taken remotely, planned from the start for general practice, triage and follow-up, not only mental health, and portable enough to be sold as a capability; (2) inside the session, AI takes the protocol documentation clinicians dislike (notes, referrals, prescriptions, exam requests, reports) and gets out of the way during the consultation. Diagnostic suggestions come after the session. The clinician always has control.
