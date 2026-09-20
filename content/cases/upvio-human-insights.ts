@@ -19,11 +19,11 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "01 — Context", title: "Technology without a product" },
     {
       type: "paragraph",
-      text: "Upvio had built multimodal AI that could read vital signs from a camera and voice during a consultation. What it didn't have was a product: no use cases, no place for the technology to live in the platform, and no answer to the question a clinician would actually ask, which is what this is for.",
+      text: "When I joined, Upvio already had its eye on a multimodal AI that could read vital signs from a camera and a voice. The technology was still in development, and the company had a stake in it, so it was on the table from the start. What didn't exist was a product: no use cases, no place for it to live in the platform, and no answer to the question a clinician would actually ask, which is what this is for.",
     },
     {
       type: "paragraph",
-      text: "My job was to turn that technology into something clinicians would use and trust, and to define what AI should do across the rest of the platform.",
+      text: "My job was to make it a product, and to make it part of ours: to find where it belonged in a consultation, in the platform and in the workflows around both, and then to define what AI should do across the rest of the product.",
     },
 
     { type: "section", label: "02 — Research", title: "What clinicians actually want help with" },
@@ -57,7 +57,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health: the technology was already being built as a capability in its own right, which is what made it fit general practice and triage as much as therapy. What I owned was where it lived — how a reading reaches a clinician, how it sits in a consultation and in the record, and how it feeds the Human Insights layer.",
+      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health: the technology was being built as a capability in its own right, which is what made it fit general practice and triage as much as therapy. What I owned was where it lived — how a reading reaches a clinician, how it sits in a consultation and in the record, and how it feeds the Human Insights layer.",
     },
     {
       type: "paragraph",
