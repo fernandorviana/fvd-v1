@@ -60,7 +60,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "03 — Foundations", title: "One system, one structure" },
     {
       type: "paragraph",
-      text: "I created the design system from scratch: typography, colour tokens and spacing, then a component library for inputs, tables, cards, navigation and layouts. It started deliberately lean and grew with every feature. The same system later carried the scheduling rebuild and the AI surfaces.",
+      text: "I created the design system, Australis, from scratch: typography, colour tokens and spacing, then a component library for inputs, tables, cards, navigation and layouts. It started deliberately lean and grew with every feature. The same system later carried the scheduling rebuild and the AI surfaces.",
     },
     {
       type: "image",

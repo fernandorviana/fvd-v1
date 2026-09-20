@@ -1,5 +1,5 @@
 /** Ids of SVG diagrams built as components in components/case/diagrams.tsx. */
-export type DiagramId = "ia-before-after" | "service-location-staff";
+export type DiagramId = "ia-before-after" | "service-location-staff" | "ai-around-the-consultation";
 
 export type CaseBlock =
   /** Starts a numbered section. Every other block belongs to the section above it. */

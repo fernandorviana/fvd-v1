@@ -39,12 +39,12 @@ export const projects: Project[] = [
     slug: "upvio-human-insights",
     company: "Upvio AI",
     track: "Human Insights AI",
-    title: "Turning multimodal AI research into tools clinicians trust",
+    title: "Vitals at a distance, paperwork off the desk",
     sector: "Healthcare",
     role: "Founding Designer · Head of Design",
     years: "Jan 2023 — Mar 2025",
     summary:
-      "I turned Vitals AI and Empathic AI from technology without a product into transparent tools inside clinical workflows.",
+      "I turned multimodal AI without a product into a remote check-up and an AI layer built around what clinicians actually wanted help with.",
   },
   {
     slug: "automaise",
