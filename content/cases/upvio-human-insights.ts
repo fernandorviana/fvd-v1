@@ -57,7 +57,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health, which is why we planned it for general practice and triage as much as for therapy, and why it could stand on its own as a capability another product might buy.",
+      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health: the technology was already being built as a capability in its own right, which is what made it fit general practice and triage as much as therapy. What I owned was where it lived — how a reading reaches a clinician, how it sits in a consultation and in the record, and how it feeds the Human Insights layer.",
     },
     {
       type: "paragraph",
