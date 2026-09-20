@@ -44,6 +44,8 @@ export const upvioHumanInsights: CaseStudy = {
         "The painful part of the job isn't the consultation, it's everything around it: progress notes, referrals, reports and insurance paperwork.",
         "Expression analysis was welcome, but as a report after the session. During the session it would be a distraction.",
         "Clinic owners were stitching together numbers from several tools by hand to understand how the business was doing.",
+        "At the front desk, payments were reconciled by hand: open the bank statement, work out who had paid for what, record it in the system. It was the most time-consuming task in the practice.",
+        "Matching a patient to the right practitioner happened on the phone, from whatever the caller said about why they needed an appointment.",
       ],
     },
     {
