@@ -39,6 +39,10 @@ export const upvioScheduling: CaseStudy = {
     },
     {
       type: "paragraph",
+      text: "How much a clinic depends on this became clear at the front desk. At the practice I studied, booking an appointment means picking from more than fifty services organised by specialty, filtering a calendar full of practitioners down to the ones qualified and available, and assigning an office room. Scheduling there is never a time and a person. It is a combination of resources that all have to line up, and the product had no idea those relationships existed.",
+    },
+    {
+      type: "paragraph",
       text: "The root cause wasn't any single screen. The data model didn't reflect the real rules of the business, so the whole burden of keeping things consistent fell on the people configuring the product, and on support when they couldn't.",
     },
 

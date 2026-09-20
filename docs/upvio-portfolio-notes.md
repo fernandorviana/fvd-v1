@@ -277,6 +277,15 @@ Human Insights AI:
 - **"Before" screenshots:** possibly a few; to be found.
 - **Platform deep-dive feature:** undecided. Scheduling and AI integration were the strongest stories but live in their own cases.
 
+### Platform case (confirmed)
+
+- **Before:** the product was **Cogsworth**, a scheduling tool — basic calendar, client list, practitioner list, customisable forms, little else. The rename/transition to Upvio happened at the moment Fernando joined, with his arrival as part of the momentum. The name may be used publicly.
+- **Role beyond design:** the company's organisation was the bottleneck. He pushed for a collaborative, shorter-cycle way of working and introduced design-thinking practices adapted to the context, acting as another stakeholder and a force for building something with market presence.
+- **Design QA:** ran QA on implementation, categorising findings as UI/UX debt, bug or improvement and ranking them by criticality (P1–P5), producing a backlog engineering could work through.
+- **Front desk (from the interview at the clinic):** booking across 50+ services organised by specialty; heavy reliance on calendar filters (service, practitioner, time of day); an office room assigned to every appointment, respecting practitioner preferences; check-in with invoice and payment on the spot for in-person, emailed access link plus pre-payment for online (introduced to cut no-shows); each appointment records attendance, payment and invoice state; manual invoice/receipt generation and manual debt settlement against bank statements — the most time-consuming task; patient–practitioner matching done on the phone from the reason for the appointment; external practitioners update availability monthly; improvement ideas: automate debt settlement, richer reminders, capture preferred language.
+- **Dashboards:** designed per role (Admin, Manager, Practitioner) from each role's responsibilities, with user stories and defined content (alerts, today's appointments, week-on-week comparisons, outstanding payments, revenue by location and service).
+- **"After" IA (draft, in the `ia-before-after` diagram):** clinical work (schedule, patient records, clinical notes, telehealth), patient-facing (portal, custom forms, secure messaging), organisation (locations & services, teams & roles, dashboards), Human Insights AI. **Not yet confirmed** — Fernando has the real navigation in the Figma design files and will correct it.
+
 ### Scheduling case (confirmed)
 
 - **Sources:** Perplexity-generated docs (`upvio-resource-scheduling-domain-model.md`, `upvio-case-study-final.md`, `upvio-scheduling-domain-diagram.md`). Their "inspired by Microsoft Bookings / Dynamics 365" and generic lessons were **not** confirmed and are not used.

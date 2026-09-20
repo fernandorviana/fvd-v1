@@ -19,7 +19,11 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "01 — Context", title: "A capable engine nobody had designed" },
     {
       type: "paragraph",
-      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023, the engineering was solid, but nobody had ever designed the product.",
+      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. It did not start there. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool: a basic calendar, a list of clients, a list of practitioners, customisable forms, and not much else. The rename to Upvio happened as I arrived, and my arrival was part of the momentum behind it.",
+    },
+    {
+      type: "paragraph",
+      text: "The engineering underneath was solid. Nobody had ever designed the product.",
     },
     { type: "paragraph", text: "Many of the capabilities clinics expected were missing or rudimentary:" },
     {
@@ -73,7 +77,11 @@ export const upvioPlatform: CaseStudy = {
       type: "paragraph",
       text: "In parallel I redesigned the product's structure: navigation, dashboards, the primary flows for scheduling, consultations, documentation and patients, and the mental model underneath them.",
     },
-    { type: "diagram", id: "ia-before-after", caption: "Information architecture, before and after" },
+    {
+      type: "diagram",
+      id: "ia-before-after",
+      caption: "Information architecture: from a scheduling tool to a platform",
+    },
 
     { type: "section", label: "04 — Building the platform", title: "Designed around three journeys" },
     {
@@ -104,7 +112,11 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Organisation: roles, teams and permissions for the different people and structures inside a practice, from a single clinic to a multi-location group.",
+      text: "Front desk and organisation: the people who run the day. I spent a long interview walking through one clinic's front desk, and that day shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the ones that arrive later by bank transfer. Underneath all of it: roles, teams and permissions for the different people and structures inside a practice, from a single clinic to a multi-location group.",
+    },
+    {
+      type: "paragraph",
+      text: "So an appointment had to carry more than a time and a name. It carries whether the patient turned up, whether they paid and whether an invoice exists, because that is the state the front desk works from all day.",
     },
     {
       type: "image",
@@ -134,11 +146,19 @@ export const upvioPlatform: CaseStudy = {
       type: "paragraph",
       text: "Research ran alongside delivery through interviews and forms, and the same design language extended to the marketing website and the story of the product.",
     },
+    {
+      type: "paragraph",
+      text: "The other half of the job was how the company worked. The way it was organised was the bottleneck, so I pushed for a team that worked collaboratively and in shorter cycles, and introduced design-thinking practices adapted to the size and pace we actually had. I ended up acting as another stakeholder more than as a service to the others: someone arguing for a product with a real presence in the market.",
+    },
+    {
+      type: "paragraph",
+      text: "I also ran design QA on what got built. Everything that came back was categorised as UI debt, a bug or an improvement and ranked by criticality, which turned a pile of complaints into a list engineering could work through.",
+    },
 
     { type: "section", label: "07 — Outcomes", title: "A platform, not a set of functions" },
     {
       type: "paragraph",
-      text: "Upvio went from a set of disconnected functions to a coherent platform with one design language, one navigation model and the core capabilities clinics expected. The foundations were solid enough to carry what came next: a rebuilt scheduling model and a Human Insights AI layer.",
+      text: "Cogsworth was a calendar with lists attached. Upvio went from a set of disconnected functions to a coherent platform with one design language, one navigation model and the core capabilities clinics expected. The foundations were solid enough to carry what came next: a rebuilt scheduling model and a Human Insights AI layer.",
     },
     {
       type: "paragraph",
