@@ -296,5 +296,5 @@ Human Insights AI:
 - **Key research findings:** paper notebooks and unreadable old notes; typing breaks therapeutic silence; expression analysis wanted as a post-session report, not live; clinic owners aggregating numbers by hand.
 - **Status:** Vitals AI shipped to production, Empathic AI followed. Documentation, assisted diagnosis and the wider AI integration were fully researched and designed but only partly implemented; the company was weighing the investment when the collaboration ended.
 - **University of Florida:** was evaluating and researching Vitals AI when he left, with Empathic AI next.
-- **Empathic AI:** built by an external engineer; Fernando did the design and gave implementation guidelines directly.
+- **Empathic AI:** clinical decision support, not just faster notes — marking the moments that matter in a session and jumping back to them, tracking emotional shifts across sessions, surfacing signals that contradict what was said. Support for the clinician's judgement, never a diagnosis. Out of the way by default during a session, available on request. Built by an external engineer; Fernando did the design and gave implementation guidelines directly.
 - **Lesson:** design ran far ahead of delivery capacity; some designed work was never built as designed.

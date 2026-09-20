@@ -69,7 +69,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. It would offer observations and diagnostic suggestions drawn from the session, but afterwards. During the consultation, what matters is the connection with the person in the room.",
+      text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. Both arrive after the session by default, and during one the AI only speaks when the clinician asks. What matters in the room is the person in it.",
     },
     { type: "diagram", id: "ai-around-the-consultation", caption: "Where AI belongs: before, during and after the consultation" },
     { type: "paragraph", text: "Four principles held both halves together:" },
@@ -123,10 +123,18 @@ export const upvioHumanInsights: CaseStudy = {
       text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a client and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would actually work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
     },
 
-    { type: "section", label: "07 — Empathic AI", title: "Signals for mental health" },
+    { type: "section", label: "07 — Empathic AI", title: "A second set of eyes on the session" },
     {
       type: "paragraph",
-      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. I designed the surface where it lives in the platform and how its output reaches the clinician, again as something to review after a session rather than during it.",
+      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. It was never only a faster route to notes. Reading tone, expression and emotional shifts is clinical information, and I designed it as support for the clinician's judgement.",
+    },
+    {
+      type: "paragraph",
+      text: "No therapist can hold perfect attention on every cue for an hour, several times a day. The design marks the moments that matter in a session and lets the clinician jump straight back to them, follows how someone's emotional state moves across sessions rather than within one, and surfaces signals that contradict what was said out loud. Over a long treatment, that is the material a clinician uses to decide whether an approach is working.",
+    },
+    {
+      type: "paragraph",
+      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. By default it waits until the session is over, and during a session it only speaks when asked.",
     },
     {
       type: "paragraph",
