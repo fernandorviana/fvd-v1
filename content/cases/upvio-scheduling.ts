@@ -57,7 +57,7 @@ export const upvioScheduling: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "I conceived that model and made the case for it to the CTO and the engineers. Convincing them that another round of screens wouldn't solve it was the hardest part of the work. Along the way I benchmarked scheduling tools, from clinical practice software to general booking products, to see how others structured the same entities.",
+      text: "I conceived that model and made the case for it to the CTO and the engineers. Convincing them that another round of screens wouldn't solve it was the hardest part of the work. Along the way I benchmarked clinical practice software such as Jane, SimplePractice, Carepatron and PowerDiary, to see how others structured the same entities.",
     },
 
     { type: "section", label: "04 — The model", title: "Location as the anchor" },
