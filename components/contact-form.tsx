@@ -23,7 +23,7 @@ export function ContactForm() {
   if (state.status === "success") {
     return (
       <p className="mt-10 max-w-lg font-sans text-base text-muted">
-        Thanks — I&apos;ll get back to you shortly.
+        Thanks. I&apos;ll get back to you shortly.
       </p>
     );
   }

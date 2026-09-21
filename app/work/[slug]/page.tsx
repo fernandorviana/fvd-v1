@@ -7,10 +7,10 @@ import { CaseHeader } from "@/components/case/case-header";
 import { CaseStats } from "@/components/case/case-stats";
 import { NextCase } from "@/components/case/next-case";
 import { getCase } from "@/content/get-case";
-import { getProject, projects } from "@/content/projects";
+import { getProject, visibleProjects } from "@/content/projects";
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return visibleProjects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/work/[slug]">): Promise<Metadata> {
