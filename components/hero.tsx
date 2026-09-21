@@ -10,9 +10,10 @@ export function Hero() {
       </h1>
 
       <p className="mt-6 max-w-2xl font-sans text-lg leading-relaxed text-muted sm:text-xl">
-        Senior/Lead Product Designer with 10+ years building products in AI,
-        Fintech, and Healthcare — almost always as the first designer on the
-        team, setting up the design practice from scratch.
+        I design products in AI, fintech and healthcare, almost always as a
+        team&apos;s first designer: building the practice, the system and the
+        product at the same time. 12+ years in, most recently as Founding
+        Designer and Head of Design at Upvio.
       </p>
 
       <nav className="mt-12 flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm">

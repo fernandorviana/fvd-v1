@@ -18,7 +18,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "Fernando Viana — Product Designer",
   description:
-    "Senior/Lead Product Designer. AI, Fintech, and Healthcare. Often the first designer on the team.",
+    "Fernando Viana designs products in AI, fintech and healthcare, almost always as a team's first designer. 12+ years of experience.",
   // Keep search engines out while the site is password-protected.
   robots: process.env.SITE_PASSWORD ? { index: false, follow: false } : undefined,
 };

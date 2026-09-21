@@ -5,6 +5,9 @@ const CASADIGITAL_API_URL =
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const SEND_FAILED =
+  "Unable to send your message. Email me at fernando.rodrigues.viana@gmail.com instead.";
+
 export type ContactFormState = {
   status: "idle" | "success" | "error";
   message?: string;
@@ -33,11 +36,11 @@ export async function submitContactForm(
 
   const fieldErrors: ContactFormState["fieldErrors"] = {};
   if (name.length < 2) fieldErrors.name = "Enter your name.";
-  if (!EMAIL_PATTERN.test(email)) fieldErrors.email = "Enter a valid email.";
-  if (message.length < 10) fieldErrors.message = "Message must be at least 10 characters.";
+  if (!EMAIL_PATTERN.test(email)) fieldErrors.email = "Enter an email address, like name@example.com.";
+  if (message.length < 10) fieldErrors.message = "Write at least 10 characters.";
 
   if (Object.keys(fieldErrors).length > 0) {
-    return { status: "error", fieldErrors, message: "Please fix the fields below." };
+    return { status: "error", fieldErrors, message: "Check the messages above and try again." };
   }
 
   const apiKey = process.env.SITE_API_KEY;
@@ -45,7 +48,7 @@ export async function submitContactForm(
     console.error("SITE_API_KEY is not configured.");
     return {
       status: "error",
-      message: "The form is temporarily unavailable — please email me directly.",
+      message: SEND_FAILED,
     };
   }
 
@@ -73,7 +76,7 @@ export async function submitContactForm(
       console.error("Casa Digital lead submission failed", response.status, await response.text());
       return {
         status: "error",
-        message: "Something went wrong — please email me directly.",
+        message: SEND_FAILED,
       };
     }
 
@@ -82,7 +85,7 @@ export async function submitContactForm(
     console.error("Casa Digital lead submission error", error);
     return {
       status: "error",
-      message: "Something went wrong — please email me directly.",
+      message: SEND_FAILED,
     };
   } finally {
     clearTimeout(timeout);

@@ -5,17 +5,26 @@ export function About() {
     <Section id="about" label="02 — About">
       <div className="max-w-2xl space-y-6 font-sans text-lg leading-relaxed">
         <p className="font-serif text-title">
-          Placeholder — the line that sums up how I work.
+          I join early and build design from the ground up.
         </p>
         <p className="text-muted">
-          Two or three short paragraphs: the pattern of joining early and
-          building design from the ground up, how that translates into
-          research, systems, and delivery, and the kind of team this works
-          best with.
+          At Upvio, Automaise, Public Mint and Unimoney I was the first
+          designer. The job is the same each time: learn the domain fast, set
+          up a lean design system so features can ship, and grow both while
+          the product is already in customers&apos; hands.
         </p>
         <p className="text-muted">
-          Space for the second paragraph — method, collaboration with
-          engineering and product, and what I&apos;m looking for next.
+          I do my own research, from the interview guide to the synthesis and
+          the competitor analysis. When the problem sits below the interface I
+          go there, into domain models and the rules a system has to
+          guarantee. And I stay through implementation, working directly with
+          engineers and founders, with design QA that hands engineering a
+          ranked backlog.
+        </p>
+        <p className="text-muted">
+          Twelve-plus years in. Before the first-designer roles I spent my
+          junior years at Seegno, on products like Uphold, Followistic and
+          Mapp, and before that I freelanced in editorial and web design.
         </p>
       </div>
     </Section>
