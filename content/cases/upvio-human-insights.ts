@@ -33,7 +33,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "That wasn't the only method. I also ran around six guided sessions with freelance clinicians, watching them work through the app, the designs and the prototypes, and surveyed users about how they were using the product. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi Health, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
+      text: "I also ran around six guided sessions with freelance clinicians, watching them work through the app, the designs and the prototypes, and surveyed users about how they were using the product. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi Health, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
     },
     { type: "paragraph", text: "The findings pointed somewhere other than where the technology was pointing:" },
     {
@@ -41,7 +41,7 @@ export const upvioHumanInsights: CaseStudy = {
       items: [
         "Notes lived in paper notebooks. Reading back what a patient said two years ago was close to impossible.",
         "Typing during a session breaks the silence that therapy depends on. In-person consultations were deliberately technology-free.",
-        "The painful part of the job isn't the consultation, it's everything around it: progress notes, referrals, reports and insurance paperwork.",
+        "The painful part of the job is everything around the consultation: progress notes, referrals, reports and insurance paperwork.",
         "Expression analysis was welcome, but as a report after the session. During the session it would be a distraction.",
         "Clinic owners were stitching together numbers from several tools by hand to understand how the business was doing.",
         "The front desk had its own paperwork: payments reconciled by hand against bank statements, the most time-consuming task in the practice, and patients matched to practitioners over the phone. That is where the administrative automation in the wider layer came from.",

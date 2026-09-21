@@ -43,7 +43,7 @@ export const upvioScheduling: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "The root cause wasn't any single screen. The data model didn't reflect the real rules of the business, so the whole burden of keeping things consistent fell on the people configuring the product, and on support when they couldn't.",
+      text: "The root cause sat under every screen: the data model didn't reflect the real rules of the business, so the whole burden of keeping things consistent fell on the people configuring the product, and on support when they couldn't.",
     },
 
     { type: "section", label: "03 — The decision", title: "The fix was below the interface" },
