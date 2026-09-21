@@ -12,6 +12,7 @@ export const upvioPlatform: CaseStudy = {
   },
   stats: [
     { value: "8", label: "Product areas designed from zero or rebuilt" },
+    { value: "3", label: "Role-based dashboards: admin, manager and practitioner" },
     { value: "[N]M", label: "End users reached through one enterprise client", placeholder: true },
     { value: "[N]", label: "Clinics or organisations on the platform", placeholder: true },
   ],
@@ -19,7 +20,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "01 — Context", title: "A capable engine nobody had designed" },
     {
       type: "paragraph",
-      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. It did not start there. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool: a basic calendar, a list of clients, a list of practitioners, customisable forms, and not much else. The rename to Upvio happened as I arrived, and my arrival was part of the momentum behind it.",
+      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool: a basic calendar, a list of clients, a list of practitioners, customisable forms, and not much else. The rename to Upvio happened as I joined, part of the same push to become more than a scheduling tool.",
     },
     {
       type: "paragraph",
@@ -41,8 +42,8 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "image",
-      alt: "Upvio before the redesign",
-      caption: "The product before the redesign",
+      alt: "Cogsworth, before the redesign",
+      caption: "Cogsworth, before the redesign",
       width: "wide",
       source: "screenshot",
     },
@@ -50,7 +51,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "02 — Challenge", title: "Foundations and features, at the same time" },
     {
       type: "paragraph",
-      text: "The job was to turn a capable but under-designed tool into a coherent platform, one that could support organisations with multiple locations, services and professionals without overwhelming the people using it every day.",
+      text: "The job was to turn a capable but under-designed tool into a coherent platform, one that could support organisations with multiple locations, services and practitioners without overwhelming the people using it every day.",
     },
     {
       type: "paragraph",
@@ -90,7 +91,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Clinician workflow: structured clinical notes for documenting consultations; patient records built for long-term histories, multiple professionals and custom fields per specialty; and telehealth for remote consultations inside the platform.",
+      text: "The first is the clinician's: structured clinical notes for documenting consultations; patient records built for long-term histories, multiple practitioners and custom fields per specialty; and telehealth for remote consultations inside the platform.",
     },
     {
       type: "image",
@@ -101,7 +102,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Patient engagement: a patient portal for appointments, documents and self-service; custom forms for intake, follow-up and feedback, connected to records and workflows; and secure messaging between staff and, when appropriate, patients.",
+      text: "The second is the patient's: a portal for appointments, documents and self-service; custom forms for intake, follow-up and feedback, connected to records and workflows; and secure messaging between staff and, when appropriate, patients.",
     },
     {
       type: "image",
@@ -112,11 +113,15 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Front desk and organisation: the people who run the day. I spent a long interview walking through one clinic's front desk, and that day shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the ones that arrive later by bank transfer. Underneath all of it: roles, teams and permissions for the different people and structures inside a practice, from a single clinic to a multi-location group.",
+      text: "The third belongs to the people who run the day. I spent a long interview walking through one clinic's front desk, and it shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the payments that arrive later by bank transfer.",
     },
     {
       type: "paragraph",
       text: "So an appointment had to carry more than a time and a name. It carries whether the patient turned up, whether they paid and whether an invoice exists, because that is the state the front desk works from all day.",
+    },
+    {
+      type: "paragraph",
+      text: "Around the front desk sits the organisation: roles, teams and permissions for the different people and structures inside a practice, from a single clinic to a multi-location group. I designed a dashboard for each role (admin, manager and practitioner), starting from what that role is responsible for and writing user stories before choosing content: alerts, today's appointments, week-on-week comparisons, outstanding payments, revenue by location and service.",
     },
     {
       type: "image",
@@ -126,53 +131,54 @@ export const upvioPlatform: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "05 — Scheduling", title: "The problem below the interface" },
+    { type: "section", label: "05 — What it made possible", title: "Two problems that needed their own story" },
     {
       type: "paragraph",
-      text: "Scheduling was different. Fixing it meant going below the interface and redesigning the domain model itself: how services, locations, staff and schedules depend on each other. That story has its own case study.",
+      text: "Two parts of the platform went deeper than the rest. Fixing scheduling meant going below the interface and redesigning the domain model itself: how services, locations, staff and schedules depend on each other. And the AI the company was betting on had no product around it. Each has its own case study.",
     },
     { type: "link", href: "/work/upvio-scheduling", text: "Read the Scheduling & Resource Model case" },
+    { type: "link", href: "/work/upvio-human-insights", text: "Read the Human Insights AI case" },
 
     { type: "section", label: "06 — Process", title: "One designer, many stakeholders" },
     {
       type: "paragraph",
-      text: "I was the only designer, working with an engineering team that grew from three to five, four for most of my time, and directly with the CEO, CTO, CMO, Head of Growth, Head of Compliance & Support and, at times, the Sales Director. For a short period a second designer helped produce assets within the visual language I had set.",
+      text: "Half of the job was how the company worked. The way it was organised was the bottleneck, so I pushed for a team that worked collaboratively and in shorter cycles, and introduced design-thinking practices adapted to the size and pace we had. I ended up acting as another stakeholder more than as a service to the others: someone arguing for a product with a real presence in the market.",
     },
     {
       type: "paragraph",
-      text: "Much of the job was juggling: quick wireframes to unblock decisions and test UX directions, guiding developers through implementation, and meeting the CEO's and CMO's expectations for how the product looked, all while shipping new features and reworking existing ones.",
+      text: "I also ran design QA on what got built. Every finding was categorised as UI/UX debt, a bug or an improvement and ranked by criticality from P1 to P5, which turned a pile of complaints into a backlog engineering could work through.",
     },
     {
       type: "paragraph",
-      text: "Research ran alongside delivery through interviews and forms, and the same design language extended to the marketing website and the story of the product.",
+      text: "The rest was juggling: quick wireframes to unblock decisions and test UX directions, guiding developers through implementation, and meeting the CEO's and CMO's expectations for how the product looked, all while shipping new features and reworking existing ones. The same design language extended to the marketing website and the story of the product.",
     },
     {
       type: "paragraph",
-      text: "The other half of the job was how the company worked. The way it was organised was the bottleneck, so I pushed for a team that worked collaboratively and in shorter cycles, and introduced design-thinking practices adapted to the size and pace we actually had. I ended up acting as another stakeholder more than as a service to the others: someone arguing for a product with a real presence in the market.",
+      text: "I was the only designer, working with three engineers at the start, four for most of the time and five at the peak, and directly with the CEO, CTO, CMO, Head of Growth, Head of Compliance & Support and, at times, the Sales Director. For a short period a second designer helped produce assets within the visual language I had set.",
     },
     {
       type: "paragraph",
-      text: "I also ran design QA on what got built. Everything that came back was categorised as UI debt, a bug or an improvement and ranked by criticality, which turned a pile of complaints into a list engineering could work through.",
+      text: "Research ran alongside delivery: interviews at a clinic, guided sessions with clinicians and usage surveys. The Human Insights AI case covers it in detail.",
     },
 
     { type: "section", label: "07 — Outcomes", title: "A platform, not a set of functions" },
     {
       type: "paragraph",
-      text: "Cogsworth was a calendar with lists attached. Upvio went from a set of disconnected functions to a coherent platform with one design language, one navigation model and the core capabilities clinics expected. The foundations were solid enough to carry what came next: a rebuilt scheduling model and a Human Insights AI layer.",
+      text: "Cogsworth was a calendar with lists attached. Upvio is a platform: one design language, one navigation model and the core capabilities clinics expect. The foundations were solid enough to carry what came next, a rebuilt scheduling model and a Human Insights AI layer.",
     },
     {
       type: "paragraph",
-      text: "The platform helped Upvio win enterprise clients, including one serving millions of end users, and attract new investors.",
+      text: "It also gave Upvio a product it could put in front of enterprise clients and investors. The scheduling case covers that part of the story.",
     },
 
-    { type: "section", label: "08 — Reflection", title: "What I'd do differently" },
+    { type: "section", label: "08 — What I learned", title: "Lessons from building the base" },
     {
-      type: "paragraph",
-      text: "Putting scheduling, records, telehealth, messaging and AI in one vertically integrated product gave clinics a single coherent place to work. It also made the product expensive to maintain. After I left, Upvio split it into APIs such as Vitals AI and Empathic AI for others to build on.",
-    },
-    {
-      type: "paragraph",
-      text: "Looking back, I would design for that modularity earlier: clearer boundaries between product areas, and a design system that works as building blocks outside a single app. The capabilities held up. The packaging was what needed to change.",
+      type: "list",
+      items: [
+        "Design for modularity earlier. One vertically integrated product gave clinics a single coherent place to work, and made the product expensive to maintain. After I left, Upvio split it into APIs. The capabilities held up; I would now draw clearer boundaries between product areas, and build a design system that works as building blocks outside a single app.",
+        "Ship lean foundations, then let features grow them. A small system delivered fast did more than a complete one delivered late, because every feature after it had something to stand on.",
+        "The organisation is part of the design problem. Shorter cycles and a shared way of working changed the product more than any single screen did.",
+      ],
     },
   ],
 };

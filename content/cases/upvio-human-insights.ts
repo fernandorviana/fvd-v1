@@ -12,28 +12,28 @@ export const upvioHumanInsights: CaseStudy = {
   },
   stats: [
     { value: "2", label: "AI capabilities shipped to production: Vitals and Empathic" },
-    { value: "5", label: "Interviews across practitioner, management and front-desk roles" },
+    { value: "10+", label: "Research sessions: clinic interviews across three roles, and guided sessions with clinicians" },
     { value: "[N]", label: "Clinics using the AI features", placeholder: true },
   ],
   blocks: [
     { type: "section", label: "01 — Context", title: "Technology without a product" },
     {
       type: "paragraph",
-      text: "When I joined, Upvio already had its eye on a multimodal AI that could read vital signs from a camera and a voice. The technology was still in development, and the company had a stake in it, so it was on the table from the start. What didn't exist was a product: no use cases, no place for it to live in the platform, and no answer to the question a clinician would actually ask, which is what this is for.",
+      text: "When I joined, Upvio already had its eye on a multimodal AI that could read vital signs from camera and voice. The technology was still in development, and the company had a stake in it, so it was on the table from the start. What didn't exist was a product: no use cases, no place for it to live in the platform, and no answer to the first question a clinician would ask: what is this for?",
     },
     {
       type: "paragraph",
       text: "My job was to make it a product, and to make it part of ours: to find where it belonged in a consultation, in the platform and in the workflows around both, and then to define what AI should do across the rest of the product.",
     },
 
-    { type: "section", label: "02 — Research", title: "What clinicians actually want help with" },
+    { type: "section", label: "02 — Research", title: "What clinicians want help with" },
     {
       type: "paragraph",
-      text: "I wrote an interview guide for the three roles that run a practice — practitioner, manager and front desk — and ran five interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. Its founder is also a clinician, so I interviewed her several times and kept a line open to her for the questions that came up later, which turned a study into continuous access to a real practice. The clinic was young, well organised and large enough that I could reach people in very different roles.",
+      text: "I wrote an interview guide for the three roles that run a practice (practitioner, manager and front desk) and ran five interviews at a multidisciplinary clinic with 20 employees and around 80 practitioners. Its founder is also a clinician, so I interviewed her several times and kept a line open to her for the questions that came up later, which turned a study into continuous access to a real practice. The clinic was young, well organised and large enough that I could reach people in very different roles.",
     },
     {
       type: "paragraph",
-      text: "That wasn't the only method. I also ran around half a dozen guided sessions with freelance clinicians, watching them work through the app, the designs and the prototypes, and surveyed users about how they were using the product. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
+      text: "That wasn't the only method. I also ran around six guided sessions with freelance clinicians, watching them work through the app, the designs and the prototypes, and surveyed users about how they were using the product. In parallel I studied how other products handled clinical documentation and AI: practice software like Jane, Carepatron and PowerDiary, AI scribes like Heidi, Autonotes, Autoscribe and Nabla Copilot, and general-purpose transcription like Otter, to see what changes when a tool is built for a consultation rather than a meeting.",
     },
     { type: "paragraph", text: "The findings pointed somewhere other than where the technology was pointing:" },
     {
@@ -44,8 +44,7 @@ export const upvioHumanInsights: CaseStudy = {
         "The painful part of the job isn't the consultation, it's everything around it: progress notes, referrals, reports and insurance paperwork.",
         "Expression analysis was welcome, but as a report after the session. During the session it would be a distraction.",
         "Clinic owners were stitching together numbers from several tools by hand to understand how the business was doing.",
-        "At the front desk, payments were reconciled by hand: open the bank statement, work out who had paid for what, record it in the system. It was the most time-consuming task in the practice.",
-        "Matching a patient to the right practitioner happened on the phone, from whatever the caller said about why they needed an appointment.",
+        "The front desk had its own paperwork: payments reconciled by hand against bank statements, the most time-consuming task in the practice, and patients matched to practitioners over the phone. That is where the administrative automation in the wider layer came from.",
       ],
     },
     {
@@ -63,7 +62,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "The first is a measurement. Before a consultation, a clinician takes your pulse, your breathing, your blood pressure. Reading those signs from a camera and a voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health: the technology was being built as a capability in its own right, which is what made it fit general practice and triage as much as therapy. What I owned was where it lived — how a reading reaches a clinician, how it sits in a consultation and in the record, and how it feeds the Human Insights layer.",
+      text: "The first is a measurement. Before a consultation, a clinician checks pulse, breathing and blood pressure. Reading those signs from camera and voice moves that check anywhere the patient happens to be: into a telehealth appointment, into the minutes before one, into follow-up between visits. Nothing about it is specific to mental health. The technology was being built as a capability in its own right, which is what made it fit general practice and triage as much as therapy. What I owned was where it lived: how a reading reaches a clinician, how it sits in a consultation and in the record, and how it feeds the Human Insights layer.",
     },
     {
       type: "paragraph",
@@ -89,14 +88,14 @@ export const upvioHumanInsights: CaseStudy = {
       ],
     },
 
-    { type: "section", label: "04 — The layer, and a choice", title: "One layer, two audiences" },
+    { type: "section", label: "04 — Strategy", title: "One layer, two audiences" },
     {
       type: "paragraph",
-      text: "Vitals AI and Empathic AI point at different practices: vitals at general medicine, emotional signals at mental health. Human Insights AI was the layer above them, living inside the platform and fed mostly by what those two could read, especially in the parts no one else was doing.",
+      text: "Vitals AI and Empathic AI point at different practices: vitals at general medicine, emotional signals at mental health. Human Insights AI was the layer above them, living inside the platform and fed mostly by what those two could read.",
     },
     {
       type: "paragraph",
-      text: "That layer was meant to do more than notes and templates. Reading a consultation well enough produces structure, and structure is what lets software help a clinician think, including about a diagnosis. Always as assistance, only when asked for, never the protagonist.",
+      text: "That layer was meant to do more than notes and templates. Reading a consultation well enough produces structure, and structure is what lets software help a clinician think, including about a diagnosis, under the same rule as everything else: only when asked.",
     },
     {
       type: "paragraph",
@@ -127,7 +126,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "The wider layer — assisted diagnosis, AI woven through the rest of the platform, automation of administrative work — was researched and designed in full and implemented in part. Building it all was a large investment, and the company was weighing that decision when my time there ended.",
+      text: "The wider layer (assisted diagnosis, AI woven through the rest of the platform, automation of administrative work) was researched and designed in full and implemented in part. Building it all was a large investment, and the company was weighing that decision when my time there ended.",
     },
     {
       type: "image",
@@ -137,16 +136,10 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
-    { type: "section", label: "07 — Demo data", title: "Showing clinical AI without using real patients" },
+    { type: "section", label: "07 — Empathic AI", title: "A second set of eyes on the session" },
     {
       type: "paragraph",
-      text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a client and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would actually work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
-    },
-
-    { type: "section", label: "08 — Empathic AI", title: "A second set of eyes on the session" },
-    {
-      type: "paragraph",
-      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. It was never only a faster route to notes. Reading tone, expression and emotional shifts is clinical information, and I designed it as support for the clinician's judgement.",
+      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. Reading tone, expression and emotional shifts is clinical information, and I designed it as support for the clinician's judgement.",
     },
     {
       type: "paragraph",
@@ -154,7 +147,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "It stays support, never a verdict. It offers observations, not diagnoses, and the clinician decides what they mean. And it waits: in a therapy session nothing surfaces until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
+      text: "It offers observations, not diagnoses, and the clinician decides what they mean. And it waits until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
     },
     {
       type: "paragraph",
@@ -168,6 +161,12 @@ export const upvioHumanInsights: CaseStudy = {
       source: "figma",
     },
 
+    { type: "section", label: "08 — Demo data", title: "Showing clinical AI without using real patients" },
+    {
+      type: "paragraph",
+      text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a client and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
+    },
+
     { type: "section", label: "09 — Outcomes", title: "In production, and then in pieces" },
     {
       type: "paragraph",
@@ -175,7 +174,7 @@ export const upvioHumanInsights: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Upvio later split the platform up and sold these capabilities as APIs for other products to build on. That the capability could stand on its own was the point of designing it that way, though I would rather it had done both: a product of our own and a building block for others. The Human Insights work now lives as the building block.",
+      text: "Upvio later split the platform up and sold these capabilities as APIs for other products to build on. I designed the capabilities to stand on their own, and they do. I would rather they had been both: a product of our own and a building block for others.",
     },
 
     { type: "section", label: "10 — What I learned", title: "Design ahead of delivery" },
@@ -185,7 +184,7 @@ export const upvioHumanInsights: CaseStudy = {
         "Point the technology at the right problem. The AI could read a face; what clinicians wanted was their paperwork back. Research is what turned an impressive capability into a useful product.",
         "Trust is a design material. Showing uncertainty, separating estimated from measured, and leaving the clinician the last word did more for adoption than any amount of accuracy claims.",
         "Restraint is a feature. Deciding where AI should not appear, which was during the consultation itself, shaped the product as much as deciding where it should.",
-        "Design can run too far ahead of delivery. I had a large body of designed and researched work waiting on an engineering team that was behind, and some of it was never built the way it was designed. Now I pace design to what a team can actually absorb, and I keep the finished work organised enough for whoever picks it up next.",
+        "Design can run too far ahead of delivery. I had a large body of designed and researched work waiting on an engineering team that was behind, and some of it was never built the way it was designed. Now I pace design to what a team can absorb, and I keep the finished work organised enough for whoever picks it up next.",
       ],
     },
   ],
