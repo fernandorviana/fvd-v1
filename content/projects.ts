@@ -44,7 +44,7 @@ export const projects: Project[] = [
     role: "Founding Designer · Head of Design",
     years: "Jan 2023 — Mar 2025",
     summary:
-      "I turned multimodal AI without a product into a remote check-up and an AI layer built around what clinicians actually wanted help with.",
+      "I turned multimodal AI without a product into a remote check-up and an AI layer built around what clinicians wanted help with.",
   },
   {
     slug: "automaise",

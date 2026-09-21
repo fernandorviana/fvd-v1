@@ -3,7 +3,7 @@ import type { CaseStudy } from "../case-types";
 export const upvioScheduling: CaseStudy = {
   slug: "upvio-scheduling",
   subtitle:
-    "Scheduling at Upvio kept breaking because the data model didn't match how clinics actually work. I designed a new domain model and took it to engineering. The guided configuration built on top of it brought configuration errors close to zero.",
+    "Scheduling at Upvio kept breaking because the data model didn't match how clinics work. I designed a new domain model and took it to engineering. The guided configuration built on top of it brought configuration errors close to zero.",
   facts: {
     role: "Founding Designer, Head of Design",
     timeline: "Jan 2023 — Mar 2025",
@@ -19,7 +19,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "section", label: "01 — Context", title: "Scheduling without a model" },
     {
       type: "paragraph",
-      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which professional, at what time. When I joined Upvio, scheduling was rudimentary. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a doctor, or with just a client.",
+      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
     },
     {
       type: "paragraph",
@@ -39,17 +39,17 @@ export const upvioScheduling: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "How much a clinic depends on this became clear at the front desk. At the practice I studied, booking an appointment means picking from more than fifty services organised by specialty, filtering a calendar full of practitioners down to the ones qualified and available, and assigning an office room. Scheduling there is never a time and a person. It is a combination of resources that all have to line up, and the product had no idea those relationships existed.",
+      text: "How much a clinic depends on this became clear at the front desk of the practice I studied. A booking there is a combination of resources that all have to line up: one of fifty-odd services, a practitioner who is qualified and available, an office room. The product had no idea those relationships existed.",
     },
     {
       type: "paragraph",
-      text: "The root cause wasn't any single screen. The data model didn't reflect the real rules of the business, so the whole burden of keeping things consistent fell on the people configuring the product, and on support when they couldn't.",
+      text: "The root cause sat under every screen: the data model didn't reflect the real rules of the business, so the whole burden of keeping things consistent fell on the people configuring the product, and on support when they couldn't.",
     },
 
     { type: "section", label: "03 — The decision", title: "The fix was below the interface" },
     {
       type: "paragraph",
-      text: "The team's instinct was to fix scheduling settings with more UI, and I tried every version of that too. None of it made a real difference, because the problem wasn't the interface. It was relational: the product had no model of how services, locations, staff and schedules depend on each other.",
+      text: "The team's instinct was to fix scheduling settings with more UI, and I tried every version of that too. None of it made a real difference, because the problem was relational: the product had no model of how services, locations, staff and schedules depend on each other.",
     },
     {
       type: "callout",
@@ -57,34 +57,28 @@ export const upvioScheduling: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "I conceived that model and made the case for it to the CTO and the engineers. Convincing them that another round of screens wouldn't solve it was the hardest part of the work. Along the way I benchmarked clinical practice software such as Jane, Carepatron and PowerDiary, to see how others structured the same entities.",
+      text: "I conceived that model and made the case for it to the CTO and the engineers. Convincing them that another round of screens wouldn't solve it was the hardest part of the work. Along the way I benchmarked clinical practice software such as Jane, SimplePractice, Carepatron and PowerDiary, to see how others structured the same entities.",
     },
 
     { type: "section", label: "04 — The model", title: "Location as the anchor" },
     {
       type: "paragraph",
-      text: "I designed what I call a hierarchical multi-resource scheduling model. Location is the aggregate root: every service, staff member and schedule is configured in the context of a location, which gives the system one clear boundary for consistency.",
+      text: "I designed a hierarchical multi-resource scheduling model. Location is the aggregate root, the one entity everything else hangs from: every service, staff member and schedule is configured in the context of a location, which gives the system one clear boundary for consistency.",
     },
     {
       type: "diagram",
       id: "service-location-staff",
       caption: "The Service–Location–Staff dependency graph: a booking is valid only when every relationship holds",
     },
-    { type: "paragraph", text: "The rules the model makes explicit:" },
-    {
-      type: "list",
-      items: [
-        "A service exists only at specific locations",
-        "A service can only be delivered by qualified staff",
-        "Staff work only at specific locations",
-        "Schedules belong to a location and can be narrowed by each person's own availability",
-      ],
-    },
-
-    { type: "section", label: "05 — Invariants", title: "Rules the system guarantees" },
     {
       type: "paragraph",
-      text: "The rules live in the domain, not only in the interface. That means invalid data can't be saved at all, whether it comes through the UI, the API or an integration.",
+      text: "Services exist only at specific locations, staff work only at specific locations, and schedules belong to a location and can be narrowed by each person's own availability.",
+    },
+
+    { type: "section", label: "05 — Invariants", title: "What the system refuses" },
+    {
+      type: "paragraph",
+      text: "The rules live in the domain, not only in the interface. That means invalid data can't be saved at all, whether it comes through the UI, the API or an integration. Three checks do the work:",
     },
     {
       type: "list",

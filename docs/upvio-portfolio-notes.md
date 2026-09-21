@@ -292,7 +292,7 @@ Human Insights AI:
 - **Authorship:** Fernando conceived the domain model himself and took it to the CTO and engineers, who implemented it.
 - **Before:** scheduling was poor. He added features and improved the UX, but there was no model at all: a booking could be made with just a time and a doctor, or with just a client.
 - **Key insight / hardest part:** the team kept trying to fix scheduling settings with UI. He tried every UI route too, and none brought significant improvement. The real fix was UX plus the relational domain. Communicating this to the team and convincing them was hard.
-- **Benchmark:** looked at several scheduling tools; which ones is unconfirmed. Copy says "from clinical practice software to general booking products", with no names.
+- **Benchmark (confirmed):** clinical practice software — Jane, SimplePractice, Carepatron and PowerDiary. These may be named in the copy. For clinical notes and AI scribes (AI case): Nabla Copilot, Heidi Health and others.
 - **Documentation:** the written model helped engineers who joined later (the team changed over time).
 - **Metrics:** "configuration errors close to zero" is confirmed (qualitative). Setup time and support time numbers exist but haven't been provided yet, so they are placeholders.
 
