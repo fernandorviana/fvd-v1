@@ -43,3 +43,7 @@ next-env.d.ts
 # claude code (local-only settings)
 .claude/settings.local.json
 
+
+# personal documents
+docs/Resume-*.pdf
+docs/resume-draft.md
