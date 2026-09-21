@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "Placeholder — case study title",
     sector: "AI",
     role: "First designer · Senior Product Designer",
-    years: "2021 — 2023",
+    years: "2018 — 2019",
     summary:
       "One line on the problem, the design decision, and the measurable impact.",
     placeholder: true,
@@ -64,8 +64,8 @@ export const projects: Project[] = [
     company: "Public Mint",
     title: "Placeholder — case study title",
     sector: "Fintech",
-    role: "First designer · Product Designer",
-    years: "2019 — 2021",
+    role: "First designer · Senior Product Designer",
+    years: "2019 — 2022",
     summary:
       "One line on the problem, the design decision, and the measurable impact.",
     placeholder: true,
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     company: "Unimoney",
     title: "Placeholder — case study title",
     sector: "Fintech",
-    role: "First designer · Product Designer",
-    years: "2017 — 2019",
+    role: "First designer · Lead Product Designer",
+    years: "2021 — 2022",
     summary:
       "One line on the problem, the design decision, and the measurable impact.",
     placeholder: true,

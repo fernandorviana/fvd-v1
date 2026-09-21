@@ -273,7 +273,7 @@ Human Insights AI:
 - **Team:** sole designer throughout. A second designer (asset creation) helped only briefly, following the visual line already set. Engineering team changed over time: 3 engineers at the start, 4 for most of the period, 5 at peak, with people joining and leaving. Worked directly with stakeholders: CEO, CTO, CMO, Head of Growth, Head of Compliance & Support, and occasionally the Sales Director.
 - **Emotional AI (for the AI case):** worked directly with an external engineer building the emotional AI. Did the design and gave him implementation guidelines.
 - **Foundations vs. features:** built a solid design system base as fast as possible so features could ship, then grew it component by component as needed. The early phase meant heavy workload, organisation and juggling: wireframes to speed up decisions and UX study, guiding developers, satisfying the CEO and CMO visually, and shipping new features and changes to existing ones in parallel.
-- **Metrics:** some numbers exist, including one enterprise client with millions of indirect users (name uncertain; possibly "Blue Rythm"). Unconfirmed, so keep as a placeholder until verified.
+- **Metrics:** the enterprise client with millions of indirect users is **ReachOut** (confirmed; on the CV as millions of parents and young people reached and 2M+ mental-health-related interactions). It is one of the clients there is data for; there were many more clients, so never present it as the only one. Phrase it as a client the product served, not as reach the design caused.
 - **"Before" screenshots:** possibly a few; to be found.
 - **Platform deep-dive feature:** undecided. Scheduling and AI integration were the strongest stories but live in their own cases.
 

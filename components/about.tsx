@@ -22,9 +22,11 @@ export function About() {
           ranked backlog.
         </p>
         <p className="text-muted">
-          Twelve-plus years in. Before the first-designer roles I spent my
-          junior years at Seegno, on products like Uphold, Followistic and
-          Mapp, and before that I freelanced in editorial and web design.
+          Twelve-plus years in. Seven of them were at Seegno, a product
+          studio, where I started as a junior on products like Uphold,
+          Followistic and Mapp and left as lead, with the Automaise, Public
+          Mint and Unimoney work along the way. Before that I freelanced in
+          editorial and web design.
         </p>
       </div>
     </Section>
