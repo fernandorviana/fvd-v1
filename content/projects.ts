@@ -26,7 +26,7 @@ export const projects: Project[] = [
     role: "Founding Designer · Head of Design",
     years: "Jan 2023 — Mar 2025",
     summary:
-      "A scheduling tool turned into a clinical platform: one design system and eight product areas, designed solo.",
+      "A scheduling tool turned into a clinical platform: one design system and more than ten product areas, designed solo.",
   },
   {
     slug: "upvio-scheduling",
