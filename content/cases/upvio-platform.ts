@@ -42,7 +42,7 @@ export const upvioPlatform: CaseStudy = {
         "Patient portal",
         "Secure messaging",
         "Roles and teams",
-        "Check-in, billing, invoicing and coupons",
+        "Check-in, billing and invoicing",
         "Customisable dashboards",
         "Onboarding",
       ],
@@ -308,12 +308,16 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Onboarding" },
     {
       type: "paragraph",
-      text: "There was no onboarding: a new practice landed in an empty account and had to find its own way through setup. I designed the onboarding strategy, so a practice reaches a working configuration and its first bookings without depending on support.",
+      text: "There was no onboarding: a new practice landed in an empty account and had to find its own way through setup. I designed the onboarding strategy around one goal: configure as much of the platform as possible in as few steps as possible, with the least friction for the customer.",
+    },
+    {
+      type: "paragraph",
+      text: "The practice makes the product its own from the first steps, down to its brand colour applied across the app. A guided setup, with gamification to keep it moving, takes them through the rest, and they can skip it at any moment.",
     },
     {
       type: "image",
-      alt: "Onboarding a new practice: setup steps and first-run guidance",
-      caption: "Onboarding: from an empty account to a working practice",
+      alt: "Onboarding a new practice: brand colour applied to the app, and the guided setup with its progress",
+      caption: "Onboarding: the fewest steps to a practice that looks like its own",
       width: "wide",
       source: "figma",
     },
