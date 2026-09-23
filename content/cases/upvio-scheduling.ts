@@ -121,7 +121,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "subheading", text: "Staff and availability" },
     {
       type: "paragraph",
-      text: "A staff member is tied to the locations they work at and the services they are qualified for. Their own availability narrows the location's schedule rather than living beside it, which matters in a practice where external practitioners update their availability every month.",
+      text: "A staff member is tied to the locations they work at and the services they are qualified for. Their own availability, set as time slots, narrows the location's schedule rather than living beside it, which matters in a practice where external practitioners update their availability every month.",
     },
     {
       type: "image",
