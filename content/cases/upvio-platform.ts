@@ -126,7 +126,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Before designing, I studied how the practice software clinicians already used handled notes, mainly Jane and PowerDiary: template libraries per specialty, locked notes as permanent record, pinned entries, PDF export, privacy per file. It set the baseline a clinician would expect, and showed where nobody had solved the two-readers problem.",
+      text: "Before designing, I studied how the practice software clinicians already used handled notes, mainly Jane, SimplePractice and PowerDiary: template libraries per specialty, locked notes as permanent record, pinned entries, PDF export, privacy per file. It set the baseline a clinician would expect, and showed where nobody had solved the two-readers problem.",
     },
     {
       type: "image",
