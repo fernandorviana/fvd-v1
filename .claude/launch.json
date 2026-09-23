@@ -4,8 +4,24 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "/bin/zsh",
-      "runtimeArgs": ["-lc", "exec npm run dev"],
-      "port": 3000
+      "runtimeArgs": [
+        "-lc",
+        "exec npm run dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "hero-flow-bg-demo",
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4321",
+        "--directory",
+        "experiments/hero-flow-bg"
+      ],
+      "port": 4321
     }
   ]
 }

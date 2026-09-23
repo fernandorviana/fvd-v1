@@ -1,0 +1,148 @@
+/* ==========================================================================
+   CONFIGURAÇÃO RÁPIDA
+   Estas variáveis são a forma mais simples de ajustar o visual sem tocar
+   no resto do CSS ou no JS. O script.js lê --pattern-color em tempo de
+   execução (getComputedStyle) para colorir as linhas na cena WebGL, por
+   isso a cor do fallback estático e a da versão animada ficam sempre
+   sincronizadas.
+   ========================================================================== */
+:root {
+  --hero-bg: #0b0c10;                    /* cor de fundo do header */
+  --hero-fg: #f5f5f2;                    /* cor do texto principal */
+  --hero-muted: rgba(245, 245, 242, 0.7); /* cor do subtítulo */
+  --pattern-color: #7fe6b3;              /* cor das linhas do padrão (fallback + WebGL) */
+  --pattern-opacity: 0.55;               /* opacidade geral do padrão de fundo */
+  --accent: #7fe6b3;                     /* cor do botão / CTA */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--hero-bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh; /* full-viewport real (svh evita saltos com barras móveis) */
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Fallback estático — recolorido via CSS mask.
+   mask-image usa apenas o canal alpha do SVG (ignora o "stroke" fixo do
+   ficheiro) e pinta o resultado com background-color. Assim conseguimos
+   mudar a cor do padrão apenas via --pattern-color, sem editar o SVG.
+   -------------------------------------------------------------------------- */
+.hero__fallback-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--pattern-color);
+  opacity: var(--pattern-opacity);
+
+  -webkit-mask-image: url("pattern.svg");
+  mask-image: url("pattern.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  /* "cover" garante que o padrão preenche sempre o header, tal como um
+     background-image: cover faria numa imagem normal. */
+  -webkit-mask-size: cover;
+  mask-size: cover;
+
+  transition: opacity 0.6s ease;
+}
+
+/* Quando a cena WebGL está pronta, o JS adiciona esta classe para esconder
+   o fallback com um fade suave em vez de um corte abrupto. */
+.hero__fallback-bg.is-hidden {
+  opacity: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Canvas WebGL
+   -------------------------------------------------------------------------- */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hero__canvas.is-ready {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Conteúdo do hero (título, subtítulo, CTA)
+   -------------------------------------------------------------------------- */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 0 1.5rem;
+  text-align: center;
+  /* deixa o fundo receber os eventos de rato para o parallax funcionar
+     em toda a área do header, e não só fora do texto */
+  pointer-events: none;
+}
+
+.hero__content > * {
+  pointer-events: auto;
+}
+
+.hero__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hero-muted);
+}
+
+.hero__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.hero__subtitle {
+  margin: 0 auto 2rem;
+  max-width: 42ch;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--hero-muted);
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--hero-bg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px var(--accent);
+}

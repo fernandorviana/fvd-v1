@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero com fundo interactivo — Three.js + SVGLoader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="hero">
+    <!--
+      Fallback estático — está sempre presente no DOM.
+      É um <div> (não uma <img>) porque usamos CSS mask-image para "pintar"
+      o padrão SVG com a cor definida em --pattern-color (ver style.css).
+      Se o WebGL não estiver disponível (ou o script.js falhar/não carregar),
+      isto é tudo o que o visitante vê — e fica sempre igual visualmente à
+      versão animada, só sem movimento.
+    -->
+    <div class="hero__fallback-bg" aria-hidden="true"></div>
+
+    <!--
+      Canvas onde o Three.js desenha a cena WebGL.
+      Começa com opacity:0 (ver .hero__canvas em style.css) e só ganha a
+      classe "is-ready" quando a cena estiver construída e pronta a
+      renderizar — nesse momento o fallback acima esconde-se (fade-out).
+    -->
+    <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Portfolio · Fundo generativo</p>
+      <h1 class="hero__title">Formas que respondem<br />ao movimento.</h1>
+      <p class="hero__subtitle">
+        Um padrão vectorial (SVG) desenhado numa cena WebGL com Three.js —
+        com parallax e uma distorção subtil de "flow" que reage à posição
+        do rato.
+      </p>
+      <a class="hero__cta" href="#work">Ver trabalho</a>
+    </div>
+  </header>
+
+  <!--
+    Importmap: permite usar "import * as THREE from 'three'" no script.js
+    tal como faríamos com um bundler, mas sem build step — o browser
+    resolve estes nomes directamente para os módulos ES do CDN.
+    Fixamos a versão (169.0) para que o SVGLoader (addon) seja sempre
+    compatível com o core do three.js.
+  -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

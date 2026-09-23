@@ -44,6 +44,12 @@ next-env.d.ts
 .claude/settings.local.json
 
 
+# brainstorm companion mockups
+.superpowers/
+
 # personal documents
 docs/Resume-*.pdf
 docs/resume-draft.md
+
+# personal-mark research: third-party logos, kept local
+experiments/moodboard-personal-marks/
