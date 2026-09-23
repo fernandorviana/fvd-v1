@@ -93,25 +93,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Clinical notes" },
     {
       type: "paragraph",
-      text: "Notes are the most used tool in a practice, and the product had none. The research gave me their shape: free-text notes and notes built on templates, custom templates per specialty, rich formatting, and a privacy level per field so one note can hold what the patient sees and what stays with the team. Dictation for clinicians who don't want to type. Permissions by role or team for who can view, edit and share.",
-    },
-    {
-      type: "paragraph",
-      text: "A note belongs to an appointment. It can be written during the consultation or in a window after it ends, sits in a timeline with the important ones pinned, and exports to PDF. This structure later became what the AI documentation layer fills in.",
-    },
-    {
-      type: "image",
-      alt: "Clinical note being written from a template, with a privacy level on each field",
-      caption: "Clinical notes: template, fields and what the patient gets to see",
-      width: "wide",
-      source: "figma",
-    },
-    {
-      type: "image",
-      alt: "Template builder for clinical notes",
-      caption: "Building a note template for a specialty",
-      width: "text",
-      source: "figma",
+      text: "Notes are the most used tool in a practice, and the product had none. They got the most design attention of any area, so they have their own section below.",
     },
     { type: "subheading", text: "Patient records" },
     {
@@ -137,7 +119,66 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "section", label: "05 — Patient engagement", title: "The patient's side of the platform" },
+    { type: "section", label: "05 — Deep dive", title: "Clinical notes: one note, two readers" },
+    {
+      type: "paragraph",
+      text: "The research had made the problem concrete. Clinicians kept notes in paper notebooks and could not read back what a patient had said two years earlier. They needed to write in technical language for colleagues and in plain language for patients, and to share some of a note but never all of it. And they needed to write while keeping their attention on the person in front of them, or not write during the session at all.",
+    },
+    {
+      type: "paragraph",
+      text: "Before designing, I studied how the practice software clinicians already used handled notes, mainly Jane and PowerDiary: template libraries per specialty, locked notes as permanent record, pinned entries, PDF export, privacy per file. It set the baseline a clinician would expect, and showed where nobody had solved the two-readers problem.",
+    },
+    {
+      type: "image",
+      alt: "Note editor with a block menu: formats, media, links to appointments and other notes, signature and status",
+      caption: "The editor: a note is built from blocks, from sections and tables to a signature",
+      width: "wide",
+      source: "figma",
+    },
+    {
+      type: "paragraph",
+      text: "Two ways to write. A free-text note for the clinician who thinks as they type, and a note built on a template for the one who wants structure: the practice's own templates, per specialty, made of sections, tables, callouts and fields. Both use the same editor, built from blocks, with dictation in the tools menu for anyone who would rather speak than type.",
+    },
+    {
+      type: "image",
+      alt: "Template gallery by specialty and the template builder",
+      caption: "Templates per specialty, built and shared by the practice",
+      width: "text",
+      source: "figma",
+    },
+    {
+      type: "callout",
+      text: "One note, two readers: every field decides whether the patient sees it.",
+    },
+    {
+      type: "paragraph",
+      text: "The decision that shaped the rest was privacy per field. Instead of writing an internal note and then a separate patient-facing one, a clinician writes once and marks, field by field, what stays with the team and what the patient can see in their portal. The same note can carry the clinical assessment and the treatment plan the patient takes home.",
+    },
+    {
+      type: "image",
+      alt: "A note with per-field privacy toggles, and the patient's view of the same note beside it",
+      caption: "The same note as the clinician sees it and as the patient sees it",
+      width: "wide",
+      source: "figma",
+    },
+    {
+      type: "paragraph",
+      text: "A note belongs to an appointment. The system records when the consultation started and ended, and keeps the note open for a window after it, because that is when most of the writing happens. Notes sit in the patient's record in a timeline, most recent first, with the important ones pinned. Who can view, edit or share a note follows roles and teams, and any note exports to PDF for a referral or a records request.",
+    },
+    {
+      type: "image",
+      alt: "Patient record timeline of notes, with pinned notes at the top and a permissions panel",
+      caption: "Notes in the record: a timeline, pinned entries and who can see what",
+      width: "wide",
+      source: "figma",
+    },
+    {
+      type: "paragraph",
+      text: "This structure is what made the AI documentation layer possible later. A transcript only becomes useful when there is a template to pour it into, a field that says what the patient may read, and a clinician who signs off. The Human Insights AI case picks up from here.",
+    },
+    { type: "link", href: "/work/upvio-human-insights", text: "Read the Human Insights AI case" },
+
+    { type: "section", label: "06 — Patient engagement", title: "The patient's side of the platform" },
     {
       type: "paragraph",
       text: "The second journey is the patient's. Until then the product only faced the clinic.",
@@ -178,7 +219,7 @@ export const upvioPlatform: CaseStudy = {
       width: "text",
       source: "figma",
     },
-    { type: "section", label: "06 — Organisation", title: "The people who run the day" },
+    { type: "section", label: "07 — Organisation", title: "The people who run the day" },
     {
       type: "paragraph",
       text: "The third journey belongs to the people who run the day. I spent a long interview walking through one clinic's front desk, and it shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the payments that arrive later by bank transfer.",
@@ -219,7 +260,7 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "section", label: "07 — What it made possible", title: "Two problems that needed their own story" },
+    { type: "section", label: "08 — What it made possible", title: "Two problems that needed their own story" },
     {
       type: "paragraph",
       text: "Two parts of the platform went deeper than the rest. Fixing scheduling meant going below the interface and redesigning the domain model itself: how services, locations, staff and schedules depend on each other. And the AI the company was betting on had no product around it. Each has its own case study.",
@@ -227,7 +268,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "link", href: "/work/upvio-scheduling", text: "Read the Scheduling & Resource Model case" },
     { type: "link", href: "/work/upvio-human-insights", text: "Read the Human Insights AI case" },
 
-    { type: "section", label: "08 — Process", title: "One designer, many stakeholders" },
+    { type: "section", label: "09 — Process", title: "One designer, many stakeholders" },
     {
       type: "paragraph",
       text: "Half of the job was how the company worked. The way it was organised was the bottleneck, so I pushed for a team that worked collaboratively and in shorter cycles, and introduced design-thinking practices adapted to the size and pace we had. I ended up acting as another stakeholder more than as a service to the others: someone arguing for a product with a real presence in the market.",
@@ -249,7 +290,7 @@ export const upvioPlatform: CaseStudy = {
       text: "Research ran alongside delivery: interviews at a clinic, guided sessions with clinicians and usage surveys. The Human Insights AI case covers it in detail.",
     },
 
-    { type: "section", label: "09 — Outcomes", title: "A platform, not a set of functions" },
+    { type: "section", label: "10 — Outcomes", title: "A platform, not a set of functions" },
     {
       type: "paragraph",
       text: "Cogsworth was a calendar with lists attached. Upvio is a platform: one design language, one navigation model and the core capabilities clinics expect. The foundations were solid enough to carry what came next, a rebuilt scheduling model and a Human Insights AI layer.",
@@ -259,7 +300,7 @@ export const upvioPlatform: CaseStudy = {
       text: "It also gave Upvio a product it could put in front of enterprise clients and investors. The scheduling case covers that part of the story.",
     },
 
-    { type: "section", label: "10 — What I learned", title: "Lessons from building the base" },
+    { type: "section", label: "11 — What I learned", title: "Lessons from building the base" },
     {
       type: "list",
       items: [
