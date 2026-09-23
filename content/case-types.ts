@@ -5,6 +5,8 @@ export type CaseBlock =
   /** Starts a numbered section. Every other block belongs to the section above it. */
   | { type: "section"; label: string; title: string }
   | { type: "paragraph"; text: string }
+  /** Names a feature or topic inside a section. */
+  | { type: "subheading"; text: string }
   | { type: "list"; items: string[] }
   /** A key design decision, set large. */
   | { type: "callout"; text: string }
