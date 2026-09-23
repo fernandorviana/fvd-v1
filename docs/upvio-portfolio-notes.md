@@ -299,6 +299,7 @@ Human Insights AI:
 - **Key insight / hardest part:** the team kept trying to fix scheduling settings with UI. He tried every UI route too, and none brought significant improvement. The real fix was UX plus the relational domain. Communicating this to the team and convincing them was hard.
 - **Benchmark (confirmed):** clinical practice software — Jane, SimplePractice, Carepatron and PowerDiary. These may be named in the copy. For clinical notes and AI scribes (AI case): Nabla Copilot, Heidi Health and others.
 - **Documentation:** the written model helped engineers who joined later (the team changed over time).
+- **Availability and telehealth (confirmed 2026-09-23):** availability can be set when a staff member is created, and changed later in the calendar. Telehealth is modelled as a location of its own (time zones, added complexity). A staff member can set their own availability unless a manager has locked it (mostly telehealth).
 - **Metrics:** "configuration errors close to zero" is confirmed (qualitative). Setup time and support time numbers exist but haven't been provided yet, so they are placeholders.
 
 ### Human Insights AI case (confirmed)
