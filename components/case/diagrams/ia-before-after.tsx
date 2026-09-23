@@ -7,7 +7,7 @@
 type NavItem = { label: string; holds: string };
 
 const beforeColumns: string[][] = [
-  ["Calendar", "Client list", "Settings"],
+  ["Calendar", "Patient list", "Settings"],
   ["Practitioner list", "Custom forms"],
 ];
 
@@ -15,7 +15,7 @@ const beforeColumns: string[][] = [
 const afterNav: NavItem[] = [
   { label: "Home", holds: "Dashboards per role" },
   { label: "Calendar", holds: "Scheduling, availability, check-in" },
-  { label: "Clients", holds: "Records, notes, forms, Vitals AI" },
+  { label: "Patients", holds: "Records, notes, forms, Vitals AI" },
   { label: "Video & Chat", holds: "Telehealth, waiting room, messaging" },
   { label: "Forms", holds: "The form builder" },
   { label: "Staff", holds: "People, roles and teams" },
@@ -99,9 +99,9 @@ export function IaBeforeAfterDiagram() {
     >
       <title id="iaba-title">Information architecture before and after</title>
       <desc id="iaba-desc">
-        Before: Cogsworth, a scheduling tool made of a calendar, a client list, a practitioner list, custom forms and settings.
+        Before: Cogsworth, a scheduling tool made of a calendar, a patient list, a practitioner list, custom forms and settings.
         After: Upvio, shown as its sidebar navigation. Home holds a dashboard per role; Calendar, scheduling, staff
-        availability and check-in; Clients, records, notes, forms and Vitals AI; Video and Chat, telehealth, the waiting room and
+        availability and check-in; Patients, records, notes, forms and Vitals AI; Video and Chat, telehealth, the waiting room and
         messaging; Forms, the form builder; Staff, people, roles and teams; Services, what the practice offers;
         Locations, the anchor of scheduling; and Settings, the practice configuration. Patients use a separate
         patient portal for appointments, booking and shared notes.

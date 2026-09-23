@@ -265,7 +265,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "08 — Demo data", title: "Showing clinical AI without using real patients" },
     {
       type: "paragraph",
-      text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a client and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
+      text: "Demonstrating this kind of AI is a problem in itself: you cannot show a real consultation. I wrote a patient and a practitioner profile and scripted three consecutive sessions between them, with the emotional beats a therapist would work with. Recorded, they became demo material that shows what the AI produces without exposing anyone's data.",
     },
 
     { type: "section", label: "09 — Outcomes", title: "In production, and then in pieces" },
