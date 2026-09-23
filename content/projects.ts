@@ -1,3 +1,5 @@
+import { showPlaceholders } from "./placeholders.ts";
+
 export type Project = {
   slug: string;
   company: string;
@@ -9,7 +11,7 @@ export type Project = {
   years: string;
   /** One line — the outcome, not the task. */
   summary: string;
-  /** No case written yet: listed while developing, never in production. */
+  /** No case written yet: listed only while placeholders show (content/placeholders.ts). */
   placeholder?: boolean;
 };
 
@@ -84,9 +86,7 @@ export const projects: Project[] = [
 ];
 
 /** What the site lists and serves: placeholders drop out in production. */
-export const visibleProjects = projects.filter(
-  (project) => !project.placeholder || process.env.NODE_ENV !== "production",
-);
+export const visibleProjects = projects.filter((project) => showPlaceholders || !project.placeholder);
 
 export function getProject(slug: string) {
   return visibleProjects.find((project) => project.slug === slug);

@@ -20,25 +20,29 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "01 — Context", title: "A capable engine nobody had designed" },
     {
       type: "paragraph",
-      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool: a basic calendar, a list of clients, a list of practitioners, customisable forms, and not much else. The rename to Upvio happened as I joined, part of the same push to become more than a scheduling tool.",
+      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool. The rename to Upvio happened as I joined, part of the same push to become more than a scheduling tool.",
     },
     {
       type: "paragraph",
       text: "The engineering underneath was solid. Nobody had ever designed the product.",
     },
-    { type: "paragraph", text: "Many of the capabilities clinics expected were missing or rudimentary:" },
+    {
+      type: "paragraph",
+      text: "What existed had problems. Scheduling was the core of the product, and it worked badly enough that clients lived on workarounds to get where they wanted. Around it sat custom forms, with problems of their own, lists of patients and practitioners, and settings, some of them very complex. I redesigned the UX and UI of all of it.",
+    },
+    { type: "paragraph", text: "Everything else I designed from zero:" },
     {
       type: "list",
       items: [
+        "The design system",
         "Clinical notes",
-        "Complex patient records",
+        "Patient records",
         "Telehealth",
         "Patient portal",
         "Secure messaging",
         "Roles and teams",
-        "Robust custom forms",
-        "Advanced scheduling",
         "Check-in and billing",
+        "Role-based dashboards",
       ],
     },
     {
@@ -198,7 +202,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Custom forms" },
     {
       type: "paragraph",
-      text: "Forms existed in Cogsworth as a list on their own. I rebuilt them so they connect to the rest: intake forms sent when an appointment is booked, follow-up and feedback forms tied to a consultation, and answers that land in the patient's record instead of a detached inbox.",
+      text: "Forms existed in Cogsworth, with problems, and as a list on their own. I redesigned them so they connect to the rest: intake forms sent when an appointment is booked, follow-up and feedback forms tied to a consultation, and answers that land in the patient's record instead of a detached inbox.",
     },
     {
       type: "image",

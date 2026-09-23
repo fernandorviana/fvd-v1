@@ -19,7 +19,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "section", label: "01 — Context", title: "Scheduling without a model" },
     {
       type: "paragraph",
-      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
+      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary, and clients lived on workarounds to get the bookings they wanted. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
     },
     {
       type: "paragraph",
@@ -92,7 +92,24 @@ export const upvioScheduling: CaseStudy = {
     { type: "section", label: "06 — Guided configuration", title: "Only valid options" },
     {
       type: "paragraph",
-      text: "With the model in place, the interface could guide instead of warn. When someone creates a service and picks its locations, the system filters the staff who work there and suggests schedules. The user confirms or adjusts, and the rules are checked before anything is saved.",
+      text: "With the model in place, the interface could guide instead of warn. Each part of the configuration follows the order of the model, starting from the location, and every choice narrows the next. The rules are checked before anything is saved.",
+    },
+    { type: "subheading", text: "Locations" },
+    {
+      type: "paragraph",
+      text: "Setup starts where the model does. A location holds its own schedule, the services it offers and the people who work there, so a clinic with several sites configures each one in its own context instead of in lists that never meet.",
+    },
+    {
+      type: "image",
+      alt: "Location settings: its schedule, the services it offers and the staff who work there",
+      caption: "A location, with everything that depends on it",
+      width: "wide",
+      source: "figma",
+    },
+    { type: "subheading", text: "Services" },
+    {
+      type: "paragraph",
+      text: "When someone creates a service and picks its locations, the system filters the staff who work there and suggests schedules. The user confirms or adjusts. A service with no location, or with nobody qualified to deliver it, can no longer be created.",
     },
     {
       type: "image",
@@ -101,6 +118,19 @@ export const upvioScheduling: CaseStudy = {
       width: "wide",
       source: "figma",
     },
+    { type: "subheading", text: "Staff and availability" },
+    {
+      type: "paragraph",
+      text: "A staff member is tied to the locations they work at and the services they are qualified for. Their own availability narrows the location's schedule rather than living beside it, which matters in a practice where external practitioners update their availability every month.",
+    },
+    {
+      type: "image",
+      alt: "Staff member's locations, services and availability over the location schedule",
+      caption: "Staff availability, set inside the location's schedule",
+      width: "text",
+      source: "figma",
+    },
+    { type: "subheading", text: "Booking" },
     {
       type: "paragraph",
       text: "Booking works the same way. Pick a service, and only the locations that offer it appear. Pick a location, and only its available schedules and qualified staff remain. A staff member is then assigned automatically, or chosen from the valid ones. Showing only valid options did more for configuration errors than any validation message could.",

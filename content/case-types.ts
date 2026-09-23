@@ -1,5 +1,5 @@
 /** Ids of SVG diagrams built as components in components/case/diagrams.tsx. */
-export type DiagramId = "ia-before-after" | "service-location-staff" | "ai-around-the-consultation";
+export type DiagramId = "ia-before-after" | "service-location-staff" | "ai-around-the-consultation" | "documentation-flow";
 
 export type CaseBlock =
   /** Starts a numbered section. Every other block belongs to the section above it. */
@@ -13,7 +13,7 @@ export type CaseBlock =
   | { type: "link"; href: string; text: string }
   | {
       type: "image";
-      /** Missing src means the image is still to be produced. */
+      /** Missing src means the image is still to be produced: a placeholder holds its place. */
       src?: string;
       alt: string;
       caption: string;

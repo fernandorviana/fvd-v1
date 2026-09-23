@@ -1,12 +1,26 @@
 import Image from "next/image";
 import type { CaseBlock } from "@/content/case-types";
-import { Placeholder, showPlaceholders } from "./placeholder";
 
 type ImageBlock = Extract<CaseBlock, { type: "image" }>;
 
-export function ImageSlot({ block }: { block: ImageBlock }) {
-  if (!block.src && !showPlaceholders) return null;
+const sourceLabel: Record<ImageBlock["source"], string> = {
+  figma: "Design",
+  screenshot: "Screenshot",
+};
 
+/** Holds the place of an image still to be made, at its final proportions, in every environment. */
+function ImagePlaceholder({ block }: { block: ImageBlock }) {
+  return (
+    <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-3 rounded-sm border border-dashed border-line bg-foreground/[0.02] px-6 text-center">
+      <span className="font-sans text-xs uppercase tracking-[0.18em] text-muted">
+        {sourceLabel[block.source]} to come
+      </span>
+      <span className="max-w-[40ch] font-sans text-sm text-muted">{block.alt}</span>
+    </div>
+  );
+}
+
+export function ImageSlot({ block }: { block: ImageBlock }) {
   return (
     <figure className={block.width === "text" ? "max-w-[65ch]" : undefined}>
       {block.src ? (
@@ -19,7 +33,7 @@ export function ImageSlot({ block }: { block: ImageBlock }) {
           className="h-auto w-full rounded-sm border border-line"
         />
       ) : (
-        <Placeholder kind={block.source} label={block.caption} />
+        <ImagePlaceholder block={block} />
       )}
       <figcaption className="mt-3 font-sans text-sm text-muted">{block.caption}</figcaption>
     </figure>
