@@ -147,7 +147,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "06 — Deep dive", title: "Documentation: from consultation to signed note" },
     {
       type: "paragraph",
-      text: "This is where the research pointed, so this is where most of the design went. It builds on the clinical notes I had designed for the platform: templates per specialty, privacy per field, a note tied to its appointment. The AI fills that structure in; it doesn't replace it.",
+      text: "This is where the research pointed, so this is where most of the design went. It builds on the clinical notes I had designed for the platform: templates per specialty, privacy per field, a note tied to its appointment. The AI fills that structure in.",
     },
     { type: "link", href: "/work/upvio-platform", text: "Read the clinical notes deep dive in the Platform case" },
     {

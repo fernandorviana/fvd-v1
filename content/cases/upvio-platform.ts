@@ -11,8 +11,8 @@ export const upvioPlatform: CaseStudy = {
     team: "Solo designer, 3–5 engineers, direct line to C-level",
   },
   stats: [
-    { value: "10+", label: "Product areas designed from zero, besides redesigning what existed" },
-    { value: "5", label: "Personas: practitioner, front desk, manager, owner and the client" },
+    { value: "10+", label: "Product areas designed from zero" },
+    { value: "5", label: "Personas: practitioner, front desk, manager, owner or admin, and patient" },
     { value: "[N]M", label: "End users reached through one enterprise client", placeholder: true },
     { value: "[N]", label: "Clinics or organisations on the platform", placeholder: true },
   ],
@@ -20,7 +20,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "01 — Context", title: "A capable engine nobody had designed" },
     {
       type: "paragraph",
-      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool. The rename to Upvio happened as I joined, part of the same push to become more than a scheduling tool.",
+      text: "Upvio is a B2B platform for running healthcare practices: scheduling, patient records, consultations and patient communication, with a layer of Human Insights AI on top. When I joined in January 2023 the product was called Cogsworth, and it was a scheduling tool. The rename to Upvio happened as I joined, part of the same push to become more than that.",
     },
     {
       type: "paragraph",
@@ -28,7 +28,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "What existed had problems. Scheduling was the core of the product, and it worked badly enough that clients lived on workarounds to get where they wanted. Around it sat custom forms, with problems of their own, lists of patients and practitioners, and settings, some of them very complex. I redesigned the UX and UI of all of it.",
+      text: "What existed had problems. Scheduling was the core of the product, and it worked badly enough that practices lived on workarounds to get the bookings they needed. Around it sat custom forms, with problems of their own, lists of patients and practitioners, and settings, some of them very complex. I redesigned the UX and UI of all of it.",
     },
     { type: "paragraph", text: "Everything else I designed from zero:" },
     {
@@ -49,7 +49,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Each of these holds smaller features that were design problems of their own: custom fields per specialty, a builder for forms with many questions, Face Vitals readings inside the patient record, availability time slots for scheduling, and many more.",
+      text: "Each of these holds smaller features that were design problems of their own: custom fields per specialty, a builder for forms with many questions, Vitals AI readings inside the patient record, availability time slots for scheduling, and many more.",
     },
     {
       type: "image",
@@ -66,7 +66,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Those people were five personas with different jobs: the practitioner, the front desk, the manager, the owner or admin, and the client, who reaches the practice through their own portal.",
+      text: "Those people were five personas with different jobs: the practitioner, the front desk, the manager, the owner or admin, and the patient, who reaches the practice through the patient portal.",
     },
     {
       type: "paragraph",
@@ -95,12 +95,12 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Everything I designed was responsive, down to mobile. Practitioners move between rooms and patients book from their phones, so no screen was finished until it worked on a small one.",
+      text: "Everything I designed was responsive, down to mobile, for clinicians and patients alike. No screen was finished until it worked on a phone.",
     },
     {
       type: "image",
       alt: "The same screens on desktop and on mobile",
-      caption: "Responsive down to mobile, for clinicians and patients alike",
+      caption: "The same screens on desktop and on mobile",
       width: "wide",
       source: "figma",
     },
@@ -118,7 +118,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Clinical notes" },
     {
       type: "paragraph",
-      text: "Notes are the most used tool in a practice, and the product had none. They got the most design attention of any area, so they have their own section below.",
+      text: "Notes are one of the most used tools in a practice, and the product had none. They got the most design attention of any area, so they have their own section below.",
     },
     { type: "subheading", text: "Patient records" },
     {
@@ -147,7 +147,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Waiting room" },
     {
       type: "paragraph",
-      text: "I designed the waiting room as an experience of its own rather than a holding screen. The patient waits there before a video consultation, and the practitioner and the front desk see who is waiting and admit them when they are ready.",
+      text: "I designed the waiting room as an experience of its own. The patient waits there before a video consultation, and the practitioner and the front desk see who is waiting and admit them when they are ready.",
     },
     {
       type: "image",
@@ -174,7 +174,11 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "Two kinds of note, kept apart: progress notes, the clinical record of each session, and private notes that stay with the clinician who wrote them. And two ways to write. A free-text note for the clinician who thinks as they type, and a note built on a template for the one who wants structure: the practice's own templates, per specialty, made of sections, tables, callouts and fields. Both use the same editor, built from blocks, with dictation in the tools menu for anyone who would rather speak than type.",
+      text: "Progress notes and private notes are kept apart: a progress note is the clinical record of a session, and a private note stays with the clinician who wrote it.",
+    },
+    {
+      type: "paragraph",
+      text: "There are two ways to write. A free-text note for the clinician who thinks as they type, and a note built on a template for the one who wants structure: the practice's own templates, per specialty, made of sections, tables, callouts and fields. Both use the same editor, built from blocks, with dictation in the tools menu for anyone who would rather speak than type.",
     },
     {
       type: "image",
@@ -223,7 +227,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Patient portal" },
     {
       type: "paragraph",
-      text: "A place of their own where patients see what the practice shares with them: upcoming appointments, the documents and notes marked as shareable, and forms to fill in before a visit. They book new appointments from it and pay online ahead of an online consultation, which the practice I studied had introduced to cut no-shows.",
+      text: "A place of their own where patients see what the practice shares with them: upcoming appointments, the documents and notes marked as shareable, and forms to fill in before a visit. They book new appointments from it and pay in advance for an online consultation, which the practice I studied had introduced to cut no-shows.",
     },
     {
       type: "image",
@@ -264,7 +268,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Check-in, billing and invoicing" },
     {
       type: "paragraph",
-      text: "So an appointment had to carry more than a time and a name. It carries whether the patient turned up, whether they paid and whether an invoice exists, because that is the state the front desk works from all day. Check-in happens from the calendar: mark the patient as arrived, issue the invoice, take the payment on the spot, and see at a glance which appointments still owe something.",
+      text: "That meant an appointment had to carry more than a time and a name. It carries whether the patient turned up, whether they paid and whether an invoice exists, because that is the state the front desk works from all day. Check-in happens from the calendar: mark the patient as arrived, issue the invoice, take the payment on the spot, and see at a glance which appointments still owe something.",
     },
     {
       type: "paragraph",
@@ -292,7 +296,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Dashboards" },
     {
       type: "paragraph",
-      text: "One dashboard per role, customisable by the person using it, each written first as responsibilities and user stories, then as content. The admin sees the month: new patients, appointments and no-shows against the previous month, overdue payments, revenue by location and service. The manager sees the clinic's day: appointments by state, staff online or in a call, patients in the waiting room, patients with repeated no-shows. The practitioner sees their own day: appointments, draft and unfinished notes, patients waiting to be admitted.",
+      text: "Each role has its own dashboard, and each person can customise theirs. I wrote every dashboard first as responsibilities and user stories, then as content. The admin sees the month: new patients, appointments and no-shows against the previous month, overdue payments, revenue by location and service. The manager sees the clinic's day: appointments by state, staff online or in a call, patients in the waiting room, patients with repeated no-shows. The practitioner sees their own day: appointments, draft and unfinished notes, patients waiting to be admitted.",
     },
     {
       type: "image",
@@ -304,7 +308,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Onboarding" },
     {
       type: "paragraph",
-      text: "The product had no onboarding: a new practice arrived to an empty product and had to find its own way through the setup. I designed an onboarding strategy for it, so a practice reaches a working setup and its first bookings without depending on support.",
+      text: "There was no onboarding: a new practice landed in an empty account and had to find its own way through setup. I designed the onboarding strategy, so a practice reaches a working configuration and its first bookings without depending on support.",
     },
     {
       type: "image",
