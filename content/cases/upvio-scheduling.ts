@@ -19,7 +19,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "section", label: "01 — Context", title: "Scheduling without a model" },
     {
       type: "paragraph",
-      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary, and practices lived on workarounds to get the bookings they needed. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
+      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary, and practices lived on workarounds to get the bookings they needed. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a patient.",
     },
     {
       type: "paragraph",
@@ -97,7 +97,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "subheading", text: "Locations" },
     {
       type: "paragraph",
-      text: "Setup starts where the model does. A location holds its own schedule, the services it offers and the people who work there, so a clinic with several sites configures each one in its own context instead of in lists that never meet.",
+      text: "Setup starts where the model does. A location holds its own schedule, the services it offers and the people who work there, so a clinic with several sites configures each one in its own context instead of in lists that never meet. Telehealth is a location too, with complexity of its own, starting with time zones.",
     },
     {
       type: "image",
@@ -121,12 +121,16 @@ export const upvioScheduling: CaseStudy = {
     { type: "subheading", text: "Staff and availability" },
     {
       type: "paragraph",
-      text: "A staff member is tied to the locations they work at and the services they are qualified for. Their own availability, set as time slots, narrows the location's schedule rather than living beside it, which matters in a practice where external practitioners update their availability every month.",
+      text: "A staff member is tied to the locations they work at and the services they are qualified for. Their availability, as time slots that narrow the location's schedule, can be set when they are created and changed later in the calendar.",
+    },
+    {
+      type: "paragraph",
+      text: "Staff can also set their own availability, unless a manager has locked it, which happens mostly with telehealth. That matters in a practice where external practitioners update their availability every month.",
     },
     {
       type: "image",
-      alt: "Staff member's locations, services and availability over the location schedule",
-      caption: "Staff availability, set inside the location's schedule",
+      alt: "Calendar with a staff member's availability set as time slots within the location's schedule",
+      caption: "Staff availability: time slots set in the calendar",
       width: "text",
       source: "figma",
     },
