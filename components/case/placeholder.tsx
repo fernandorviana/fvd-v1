@@ -1,4 +1,4 @@
-/** Missing images, diagrams and metrics show while developing, never in production. */
+/** Missing diagrams and metrics show while developing, never in production. Images have their own placeholder. */
 export const showPlaceholders = process.env.NODE_ENV !== "production";
 
 export function Placeholder({ kind, label }: { kind: string; label: string }) {

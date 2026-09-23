@@ -13,7 +13,7 @@ export type CaseBlock =
   | { type: "link"; href: string; text: string }
   | {
       type: "image";
-      /** Missing src means the image is still to be produced. */
+      /** Missing src means the image is still to be produced: a placeholder holds its place. */
       src?: string;
       alt: string;
       caption: string;
