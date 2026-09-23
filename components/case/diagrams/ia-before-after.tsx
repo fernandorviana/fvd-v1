@@ -1,45 +1,50 @@
 /**
  * Information architecture before and after (Upvio platform case).
- * Two stacked panels: the small scheduling tool it was, the platform it became.
- * Groups are laid out in two columns so the "after" panel stays short enough to read on a phone.
+ * Two stacked panels: the small scheduling tool it was, and the platform it became, shown as the product's
+ * real sidebar navigation with what lives under each entry. The patient portal is a separate app.
  */
 
-type Group = { title: string; items: string[] };
+type NavItem = { label: string; holds: string };
 
 const beforeColumns: string[][] = [
   ["Calendar", "Client list", "Settings"],
   ["Practitioner list", "Custom forms"],
 ];
 
-const afterColumns: Group[][] = [
-  [
-    { title: "Clinical work", items: ["Schedule", "Patient records", "Clinical notes", "Telehealth"] },
-    { title: "Organisation", items: ["Locations & services", "Teams & roles", "Dashboards"] },
-  ],
-  [
-    { title: "Patient-facing", items: ["Patient portal", "Custom forms", "Secure messaging"] },
-    { title: "Intelligence", items: ["Human Insights AI"] },
-  ],
+/** The sidebar, top to bottom. Settings sits apart at the bottom, as it does in the product. */
+const afterNav: NavItem[] = [
+  { label: "Home", holds: "Dashboards per role" },
+  { label: "Calendar", holds: "Scheduling and check-in" },
+  { label: "Clients", holds: "Records, notes, forms, Vitals AI" },
+  { label: "Video & Chat", holds: "Telehealth, waiting room, messaging" },
+  { label: "Forms", holds: "The form builder" },
+  { label: "Staff", holds: "People, roles and teams" },
+  { label: "Services", holds: "What the practice offers" },
+  { label: "Locations", holds: "The anchor of scheduling" },
 ];
+const afterSettings: NavItem = { label: "Settings", holds: "Practice configuration" };
+const portal: NavItem = { label: "Patient portal", holds: "Appointments, booking, shared notes" };
 
 const WIDTH = 440;
 const MARGIN = 12;
 const COLUMN_X = [28, 232];
+const HOLDS_X = 148;
 const TITLE_SIZE = 16;
 const ITEM_SIZE = 13;
 const ITEM_GAP = 20;
-const GROUP_GAP = 30;
+const SETTINGS_GAP = 30;
 
-/** Stack a column of groups from a starting baseline; returns the rows and the lowest baseline used. */
-function stack(groups: Group[], startY: number) {
-  let y = startY;
-  const rows = groups.map((group) => {
-    const titleY = y;
-    const items = group.items.map((item, i) => ({ item, y: titleY + ITEM_GAP + i * ITEM_GAP }));
-    y = (items.at(-1)?.y ?? titleY) + GROUP_GAP;
-    return { group, titleY, items };
-  });
-  return { rows, bottom: y - GROUP_GAP };
+function NavRow({ item, y }: { item: NavItem; y: number }) {
+  return (
+    <>
+      <text x={28} y={y} className="fill-foreground font-sans" fontSize={ITEM_SIZE}>
+        {item.label}
+      </text>
+      <text x={HOLDS_X} y={y} className="fill-muted font-sans" fontSize={ITEM_SIZE}>
+        {item.holds}
+      </text>
+    </>
+  );
 }
 
 function Panel({ y, height, accent }: { y: number; height: number; accent?: boolean }) {
@@ -77,10 +82,13 @@ export function IaBeforeAfterDiagram() {
   const beforeBottom = beforeTop + beforeHeight;
 
   const afterTop = beforeBottom + 30;
-  const groupsTop = afterTop + 70;
-  const columns = afterColumns.map((groups) => stack(groups, groupsTop));
-  const afterBottom = Math.max(...columns.map((column) => column.bottom)) + 18;
-  const height = afterBottom + 8;
+  const navTop = afterTop + 72;
+  const settingsY = navTop + (afterNav.length - 1) * ITEM_GAP + SETTINGS_GAP;
+  const afterBottom = settingsY + 18;
+
+  const portalTop = afterBottom + 16;
+  const portalBottom = portalTop + 88;
+  const height = portalBottom + 8;
 
   return (
     <svg
@@ -92,9 +100,11 @@ export function IaBeforeAfterDiagram() {
       <title id="iaba-title">Information architecture before and after</title>
       <desc id="iaba-desc">
         Before: Cogsworth, a scheduling tool made of a calendar, a client list, a practitioner list, custom forms and settings.
-        After: Upvio, a practice platform grouped into clinical work (schedule, patient records, clinical notes,
-        telehealth), patient-facing surfaces (patient portal, custom forms, secure messaging), organisation (locations
-        and services, teams and roles, dashboards) and a Human Insights AI layer.
+        After: Upvio, shown as its sidebar navigation. Home holds a dashboard per role; Calendar, scheduling and
+        check-in; Clients, records, notes, forms and Vitals AI; Video and Chat, telehealth, the waiting room and
+        messaging; Forms, the form builder; Staff, people, roles and teams; Services, what the practice offers;
+        Locations, the anchor of scheduling; and Settings, the practice configuration. Patients use a separate
+        patient portal for appointments, booking and shared notes.
       </desc>
 
       <defs>
@@ -139,22 +149,16 @@ export function IaBeforeAfterDiagram() {
 
       <Panel y={afterTop} height={afterBottom - afterTop} accent />
       <Heading y={afterTop + 26} label="Upvio" note="a platform for running a practice" />
-      {columns.map((column, i) => (
-        <g key={COLUMN_X[i]}>
-          {column.rows.map(({ group, titleY, items }) => (
-            <g key={group.title}>
-              <text x={COLUMN_X[i]} y={titleY} className="fill-foreground font-sans" fontSize={ITEM_SIZE}>
-                {group.title}
-              </text>
-              {items.map(({ item, y }) => (
-                <text key={item} x={COLUMN_X[i]} y={y} className="fill-muted font-sans" fontSize={ITEM_SIZE}>
-                  {item}
-                </text>
-              ))}
-            </g>
-          ))}
-        </g>
+      {afterNav.map((item, i) => (
+        <NavRow key={item.label} item={item} y={navTop + i * ITEM_GAP} />
       ))}
+      <NavRow item={afterSettings} y={settingsY} />
+
+      <Panel y={portalTop} height={portalBottom - portalTop} />
+      <Heading y={portalTop + 26} label={portal.label} note="a separate app for patients" />
+      <text x={28} y={portalTop + 72} className="fill-muted font-sans" fontSize={ITEM_SIZE}>
+        {portal.holds}
+      </text>
     </svg>
   );
 }
