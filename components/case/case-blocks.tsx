@@ -13,6 +13,8 @@ function Block({ block }: { block: CaseBlock }) {
       return null;
     case "paragraph":
       return <p className={prose}>{block.text}</p>;
+    case "subheading":
+      return <h3 className="pt-4 font-serif text-2xl">{block.text}</h3>;
     case "list":
       return (
         <ul className={`${prose} list-disc space-y-1 pl-5 marker:text-line`}>
