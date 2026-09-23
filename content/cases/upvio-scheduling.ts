@@ -19,7 +19,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "section", label: "01 — Context", title: "Scheduling without a model" },
     {
       type: "paragraph",
-      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
+      text: "Scheduling sits at the heart of a clinic: which service, at which location, with which practitioner, at what time. When I joined Upvio, scheduling was rudimentary, and clients lived on workarounds to get the bookings they wanted. I added features and improved the UX, but underneath there was no model at all. You could create a booking with just a time and a practitioner, or with just a client.",
     },
     {
       type: "paragraph",

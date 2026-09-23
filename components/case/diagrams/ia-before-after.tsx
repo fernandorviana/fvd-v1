@@ -7,7 +7,7 @@
 type Group = { title: string; items: string[] };
 
 const beforeColumns: string[][] = [
-  ["Calendar", "Client list"],
+  ["Calendar", "Client list", "Settings"],
   ["Practitioner list", "Custom forms"],
 ];
 
@@ -72,7 +72,8 @@ function Heading({ y, label, note }: { y: number; label: string; note: string })
 export function IaBeforeAfterDiagram() {
   const beforeTop = 8;
   const beforeItemsY = beforeTop + 72;
-  const beforeHeight = beforeItemsY + ITEM_GAP + 18 - beforeTop;
+  const beforeRows = Math.max(...beforeColumns.map((column) => column.length));
+  const beforeHeight = beforeItemsY + (beforeRows - 1) * ITEM_GAP + 18 - beforeTop;
   const beforeBottom = beforeTop + beforeHeight;
 
   const afterTop = beforeBottom + 30;
@@ -90,7 +91,7 @@ export function IaBeforeAfterDiagram() {
     >
       <title id="iaba-title">Information architecture before and after</title>
       <desc id="iaba-desc">
-        Before: Cogsworth, a scheduling tool made of a calendar, a client list, a practitioner list and custom forms.
+        Before: Cogsworth, a scheduling tool made of a calendar, a client list, a practitioner list, custom forms and settings.
         After: Upvio, a practice platform grouped into clinical work (schedule, patient records, clinical notes,
         telehealth), patient-facing surfaces (patient portal, custom forms, secure messaging), organisation (locations
         and services, teams and roles, dashboards) and a Human Insights AI layer.
