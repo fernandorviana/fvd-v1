@@ -3,7 +3,7 @@ import type { CaseStudy } from "../case-types";
 export const upvioPlatform: CaseStudy = {
   slug: "upvio-platform",
   subtitle:
-    "As Upvio's first designer, I built the design foundations and led the redesign of the platform's core (clinical notes, records, telehealth, the patient portal and more) for multi-clinic, multi-staff organisations.",
+    "As Upvio's first designer, I turned a scheduling tool into a platform for running a practice. I built the design system, redesigned what already existed, and designed more than ten product areas from zero, from clinical notes and telehealth to the patient portal and onboarding, for everyone from the practitioner to the patient.",
   facts: {
     role: "Founding Designer, Head of Design",
     timeline: "Jan 2023 — Mar 2025",
