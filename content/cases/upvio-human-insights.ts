@@ -109,12 +109,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "05 — Vitals AI", title: "A check-up that travels" },
     {
       type: "paragraph",
-      text: "I designed the product layer around the existing technology: where a scan happens, how the readings appear during a remote consultation, how they land in the patient record, and how they are reviewed afterwards. The readings carry their own uncertainty, and they sit beside the rest of the record rather than in a separate AI widget.",
-    },
-    { type: "subheading", text: "The scan" },
-    {
-      type: "paragraph",
-      text: "The scan needs nothing but a camera and a moment, so it fits wherever a check-up is useful: taken by the patient before an appointment so the clinician starts with numbers already in hand, or repeated between visits to follow someone over time. That is also what made it portable beyond our own platform.",
+      text: "I designed the product layer around the existing technology. The scan needs nothing but a camera and a moment, so it fits wherever a check-up is useful, and it could travel beyond our own platform.",
     },
     {
       type: "image",
@@ -123,10 +118,9 @@ export const upvioHumanInsights: CaseStudy = {
       width: "text",
       source: "figma",
     },
-    { type: "subheading", text: "During a consultation" },
     {
       type: "paragraph",
-      text: "In a telehealth appointment the readings appear beside the call, next to the notes and the record the clinician already has open. Each value shows how good the reading was, and none of them is presented as if it came from a cuff or an oximeter.",
+      text: "Wherever a reading appears, beside a telehealth call or in the patient record, it shows how good the signal was, and none is presented as if it came from a cuff or an oximeter. Readings sit with the rest of the history rather than in a separate AI widget.",
     },
     {
       type: "image",
@@ -134,11 +128,6 @@ export const upvioHumanInsights: CaseStudy = {
       caption: "Readings beside the call, each with the quality of the signal behind it",
       width: "wide",
       source: "figma",
-    },
-    { type: "subheading", text: "In the record" },
-    {
-      type: "paragraph",
-      text: "After the consultation, the readings land in the patient record with the rest of the history, where the clinician reviews them and follows them from one visit to the next.",
     },
     {
       type: "image",
@@ -219,16 +208,16 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "section", label: "07 — Empathic AI", title: "A second set of eyes on the session" },
     {
       type: "paragraph",
-      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and at mental health practice. Reading tone, expression and emotional shifts is clinical information, and I designed it as support for the clinician's judgement. No therapist can hold perfect attention on every cue for an hour, several times a day.",
+      text: "Empathic AI came out of product strategy work: the same multimodal reading, aimed at emotional signals and mental health practice. I designed it as support for the clinician's judgement, because no therapist can hold perfect attention on every cue for an hour, several times a day.",
     },
     {
       type: "paragraph",
-      text: "It offers observations, not diagnoses, and the clinician decides what they mean. And it waits until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
+      text: "It offers observations, not diagnoses, and waits until the session is over, because a signal shown mid-session would pull the therapist away from the person in front of them.",
     },
     { type: "subheading", text: "Moments that matter" },
     {
       type: "paragraph",
-      text: "After a session, the report marks the moments where something shifted and lets the clinician jump straight back to them in the recording and the transcript, instead of reconstructing the hour from memory.",
+      text: "Instead of reconstructing the hour from memory, the clinician jumps straight back to the minute something shifted, in the recording and the transcript.",
     },
     {
       type: "image",
@@ -240,7 +229,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "subheading", text: "Across sessions" },
     {
       type: "paragraph",
-      text: "It follows how someone's emotional state moves across sessions rather than within one. Over a long treatment, that is the material a clinician uses to decide whether an approach is working.",
+      text: "Over a long treatment, how someone's emotional state moves from session to session is what tells a clinician whether an approach is working.",
     },
     {
       type: "image",
@@ -252,7 +241,7 @@ export const upvioHumanInsights: CaseStudy = {
     { type: "subheading", text: "What was said and what was shown" },
     {
       type: "paragraph",
-      text: "It surfaces signals that contradict what was said out loud: a patient who says they are fine while their expression says otherwise. It points at the moment and leaves the reading of it to the clinician.",
+      text: "When a patient says they are fine and their expression says otherwise, it points at the moment and leaves the reading of it to the clinician.",
     },
     {
       type: "image",
