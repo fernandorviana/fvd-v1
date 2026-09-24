@@ -28,28 +28,7 @@ export const upvioPlatform: CaseStudy = {
     },
     {
       type: "paragraph",
-      text: "What existed had problems. Scheduling was the core of the product, and it worked badly enough that practices lived on workarounds to get the bookings they needed. Around it sat custom forms, with problems of their own, lists of patients and practitioners, and settings, some of them very complex. I redesigned the UX and UI of all of it.",
-    },
-    { type: "paragraph", text: "Everything else I designed from zero:" },
-    {
-      type: "list",
-      items: [
-        "The design system",
-        "Clinical notes",
-        "Patient records",
-        "Telehealth",
-        "The waiting room",
-        "Patient portal",
-        "Secure messaging",
-        "Roles and teams",
-        "Check-in, billing and invoicing",
-        "Customisable dashboards",
-        "Onboarding",
-      ],
-    },
-    {
-      type: "paragraph",
-      text: "Each of these holds smaller features that were design problems of their own: custom fields per specialty, a builder for forms with many questions, Vitals AI readings inside the patient record, availability time slots for scheduling, and many more.",
+      text: "What existed had problems. Scheduling was the core of the product, and it worked badly enough that practices lived on workarounds to get the bookings they needed. Around it sat custom forms, with problems of their own, lists of patients and practitioners, and settings, some of them very complex. I redesigned the UX and UI of all of it. Everything else, from the design system to clinical notes, telehealth and the patient portal, I designed from zero.",
     },
     {
       type: "image",
@@ -110,10 +89,30 @@ export const upvioPlatform: CaseStudy = {
       caption: "Information architecture: from a scheduling tool to a platform",
     },
 
-    { type: "section", label: "04 — Clinician workflow", title: "Notes, records and consultations" },
+    { type: "section", label: "04 — The platform", title: "Three journeys, one appointment" },
     {
       type: "paragraph",
-      text: "Rather than treating each feature on its own, I organised the work around the three journeys the platform had to serve. The first is the clinician's.",
+      text: "Rather than treating each feature on its own, I organised the work around the three journeys the platform had to serve: the clinician's, the patient's, and that of the people who run the practice. Under all three sit the design system and, later, the Human Insights AI layer.",
+    },
+    { type: "diagram", id: "platform-map", caption: "The platform by journey, over the layers that run under all of it" },
+    {
+      type: "paragraph",
+      text: "Each area holds smaller features that were design problems of their own: custom fields per specialty, a builder for forms with many questions, Vitals AI readings inside the patient record, availability time slots for scheduling, and many more.",
+    },
+    {
+      type: "paragraph",
+      text: "The journeys are not separate products. They meet in the appointment: the intake form, the payment, the call and the note all hang from it, so a single online consultation crosses almost every part of the platform.",
+    },
+    {
+      type: "diagram",
+      id: "appointment-lifecycle",
+      caption: "One online consultation, from booking to the note: five personas, nine areas",
+    },
+
+    { type: "section", label: "05 — Clinician workflow", title: "Notes, records and consultations" },
+    {
+      type: "paragraph",
+      text: "The first journey is the clinician's.",
     },
     { type: "subheading", text: "Clinical notes" },
     {
@@ -156,7 +155,7 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "section", label: "05 — Deep dive", title: "Clinical notes: one note, two readers" },
+    { type: "section", label: "06 — Deep dive", title: "Clinical notes: one note, two readers" },
     {
       type: "paragraph",
       text: "The research had made the problem concrete. Clinicians kept notes in paper notebooks and could not read back what a patient had said two years earlier. They needed to write in technical language for colleagues and in plain language for patients, and to share some of a note but never all of it. And they needed to write while keeping their attention on the person in front of them, or not write during the session at all.",
@@ -219,7 +218,7 @@ export const upvioPlatform: CaseStudy = {
     },
     { type: "link", href: "/work/upvio-human-insights", text: "Read the Human Insights AI case" },
 
-    { type: "section", label: "06 — Patient engagement", title: "The patient's side of the platform" },
+    { type: "section", label: "07 — Patient engagement", title: "The patient's side of the platform" },
     {
       type: "paragraph",
       text: "The second journey is the patient's. Until then the product only faced the clinic.",
@@ -260,7 +259,7 @@ export const upvioPlatform: CaseStudy = {
       width: "text",
       source: "figma",
     },
-    { type: "section", label: "07 — Organisation", title: "The people who run the day" },
+    { type: "section", label: "08 — Organisation", title: "The people who run the day" },
     {
       type: "paragraph",
       text: "The third journey belongs to the people who run the day. I spent a long interview walking through one clinic's front desk, and it shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the payments that arrive later by bank transfer.",
@@ -321,7 +320,7 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "section", label: "08 — What it made possible", title: "Two problems that needed their own story" },
+    { type: "section", label: "09 — What it made possible", title: "Two problems that needed their own story" },
     {
       type: "paragraph",
       text: "Two parts of the platform went deeper than the rest. Fixing scheduling meant going below the interface and redesigning the domain model itself: how services, locations, staff and schedules depend on each other. And the AI the company was betting on had no product around it. Each has its own case study.",
@@ -329,7 +328,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "link", href: "/work/upvio-scheduling", text: "Read the Scheduling & Resource Model case" },
     { type: "link", href: "/work/upvio-human-insights", text: "Read the Human Insights AI case" },
 
-    { type: "section", label: "09 — Process", title: "One designer, many stakeholders" },
+    { type: "section", label: "10 — Process", title: "One designer, many stakeholders" },
     {
       type: "paragraph",
       text: "Half of the job was how the company worked. The way it was organised was the bottleneck, so I pushed for a team that worked collaboratively and in shorter cycles, and introduced design-thinking practices adapted to the size and pace we had. I ended up acting as another stakeholder more than as a service to the others: someone arguing for a product with a real presence in the market.",
@@ -351,7 +350,7 @@ export const upvioPlatform: CaseStudy = {
       text: "Research ran alongside delivery: interviews at a clinic, guided sessions with clinicians and usage surveys. The Human Insights AI case covers it in detail.",
     },
 
-    { type: "section", label: "10 — Outcomes", title: "A platform, not a set of functions" },
+    { type: "section", label: "11 — Outcomes", title: "A platform, not a set of functions" },
     {
       type: "paragraph",
       text: "Cogsworth was a calendar with lists attached. Upvio is a platform: one design language, one navigation model and the core capabilities clinics expect. The foundations were solid enough to carry what came next, a rebuilt scheduling model and a Human Insights AI layer.",
@@ -361,7 +360,7 @@ export const upvioPlatform: CaseStudy = {
       text: "It also gave Upvio a product it could put in front of enterprise clients and investors. The scheduling case covers that part of the story.",
     },
 
-    { type: "section", label: "11 — What I learned", title: "Lessons from building the base" },
+    { type: "section", label: "12 — What I learned", title: "Lessons from building the base" },
     {
       type: "list",
       items: [
