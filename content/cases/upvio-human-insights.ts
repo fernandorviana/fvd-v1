@@ -76,7 +76,11 @@ export const upvioHumanInsights: CaseStudy = {
       type: "paragraph",
       text: "So AI would do what clinicians like least, the protocol documentation: notes, referrals, prescriptions, exam requests and reports. On top of that it would offer observations and suggestions drawn from the session, which is support for a clinical decision rather than clerical work. It never volunteers any of it: during a consultation it answers only if the clinician asks, and in therapy its reading of the session waits until the session is over. What matters in that hour is the person in the room.",
     },
-    { type: "diagram", id: "ai-around-the-consultation", caption: "Where AI belongs: before, during and after the consultation" },
+    {
+      type: "diagram",
+      id: "ai-consultation",
+      caption: "Where AI belongs around a consultation, as designed: what the patient, the clinician and the AI each do",
+    },
     { type: "paragraph", text: "Four principles held both halves together:" },
     {
       type: "list",

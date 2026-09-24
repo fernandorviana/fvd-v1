@@ -4,7 +4,7 @@ export type DiagramId =
   | "platform-map"
   | "appointment-lifecycle"
   | "service-location-staff"
-  | "ai-around-the-consultation"
+  | "ai-consultation"
   | "documentation-flow";
 
 export type CaseBlock =
