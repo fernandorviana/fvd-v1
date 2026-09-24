@@ -112,17 +112,12 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "05 — Clinician workflow", title: "Notes, records and consultations" },
     {
       type: "paragraph",
-      text: "The first journey is the clinician's.",
-    },
-    { type: "subheading", text: "Clinical notes" },
-    {
-      type: "paragraph",
-      text: "Notes are one of the most used tools in a practice, and the product had none. They got the most design attention of any area, so they have their own section below.",
+      text: "The clinician's journey keeps the patient's history within reach, in the record and during the call. Clinical notes got the most design attention of any area, so they have their own section below.",
     },
     { type: "subheading", text: "Patient records" },
     {
       type: "paragraph",
-      text: "One record per patient, holding the long-term history across every practitioner who treats them. It opens on a dashboard of the patient and splits into tabs: appointments, notes, documents, forms, personal information, with custom fields per specialty so a physiotherapist and a psychologist each record what matters to them.",
+      text: "The record opens on a dashboard of the patient, with a tab for each kind of history. Custom fields per specialty let a physiotherapist and a psychologist each record what matters to them.",
     },
     {
       type: "image",
@@ -131,10 +126,10 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "subheading", text: "Telehealth" },
+    { type: "subheading", text: "Telehealth and the waiting room" },
     {
       type: "paragraph",
-      text: "Video consultations inside the platform, designed end to end: the patient's access link and pre-payment, the call itself with the appointment's notes and record at hand, and the states a call moves through so the front desk can see who is in session. It later became the surface where Vitals and Empathic AI readings land.",
+      text: "I designed telehealth end to end, including the states a call moves through, so the front desk can see who is in session. It later became the surface where Vitals and Empathic AI readings land.",
     },
     {
       type: "image",
@@ -143,10 +138,9 @@ export const upvioPlatform: CaseStudy = {
       width: "wide",
       source: "figma",
     },
-    { type: "subheading", text: "Waiting room" },
     {
       type: "paragraph",
-      text: "I designed the waiting room as an experience of its own. The patient waits there before a video consultation, and the practitioner and the front desk see who is waiting and admit them when they are ready.",
+      text: "The waiting room is an experience of its own, designed from both sides: the patient waiting, and the practitioner and front desk deciding when to let them in.",
     },
     {
       type: "image",
@@ -221,12 +215,12 @@ export const upvioPlatform: CaseStudy = {
     { type: "section", label: "07 — Patient engagement", title: "The patient's side of the platform" },
     {
       type: "paragraph",
-      text: "The second journey is the patient's. Until then the product only faced the clinic.",
+      text: "The patient's journey started from nothing: until then the product only faced the clinic.",
     },
     { type: "subheading", text: "Patient portal" },
     {
       type: "paragraph",
-      text: "A place of their own where patients see what the practice shares with them: upcoming appointments, the documents and notes marked as shareable, and forms to fill in before a visit. They book new appointments from it and pay in advance for an online consultation, which the practice I studied had introduced to cut no-shows.",
+      text: "The portal shows patients only what the practice chooses to share, down to single fields of a note. Online consultations are paid in advance from it, something the practice I studied had introduced to cut no-shows.",
     },
     {
       type: "image",
@@ -238,7 +232,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Custom forms" },
     {
       type: "paragraph",
-      text: "Forms existed in Cogsworth, with problems, and as a list on their own. I redesigned them so they connect to the rest: intake forms sent when an appointment is booked, follow-up and feedback forms tied to a consultation, and answers that land in the patient's record instead of a detached inbox.",
+      text: "Forms existed in Cogsworth as a list on their own. I connected them to the rest: intake forms go out when an appointment is booked, follow-up and feedback forms are tied to a consultation, and every answer lands in the patient's record.",
     },
     {
       type: "image",
@@ -250,7 +244,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Secure messaging" },
     {
       type: "paragraph",
-      text: "Free-form messaging between staff, and with patients when the practice allows it, inside the platform instead of email or WhatsApp. Staff presence shows across the product, so a manager can see who is online or in a call and start a conversation from there.",
+      text: "Free-form messaging keeps conversations inside the platform instead of email or WhatsApp, between staff and with patients when the practice allows it. Staff presence shows across the product, so a manager can see who is online or in a call and start a conversation from there.",
     },
     {
       type: "image",
@@ -259,19 +253,15 @@ export const upvioPlatform: CaseStudy = {
       width: "text",
       source: "figma",
     },
-    { type: "section", label: "08 — Organisation", title: "The people who run the day" },
+    { type: "section", label: "08 — Running the practice", title: "The people who run the day" },
     {
       type: "paragraph",
-      text: "The third journey belongs to the people who run the day. I spent a long interview walking through one clinic's front desk, and it shaped a lot of the product. Booking there means choosing from more than fifty services organised by specialty, navigating a calendar full of practitioners through filters, and assigning an office room to every appointment while respecting each practitioner's preferences. Then checking patients in, issuing the invoice, taking the payment, and chasing the payments that arrive later by bank transfer.",
+      text: "A long interview walking through one clinic's front desk shaped much of this journey. Booking there means choosing from more than fifty services, filtering a calendar full of practitioners and assigning a room to every appointment. Then checking patients in, issuing the invoice, taking the payment, and chasing the payments that arrive later by bank transfer.",
     },
     { type: "subheading", text: "Check-in, billing and invoicing" },
     {
       type: "paragraph",
-      text: "That meant an appointment had to carry more than a time and a name. It carries whether the patient turned up, whether they paid and whether an invoice exists, because that is the state the front desk works from all day. Check-in happens from the calendar: mark the patient as arrived, issue the invoice, take the payment on the spot, and see at a glance which appointments still owe something.",
-    },
-    {
-      type: "paragraph",
-      text: "Behind check-in sits the billing the practice had been doing by hand: invoices issued from the appointment, payments recorded against them, and coupons for the discounts a practice offers.",
+      text: "So an appointment carries more than a time and a name: whether the patient turned up, whether they paid, whether an invoice exists. That is the state the front desk works from all day. Check-in happens from the calendar, invoices are issued from the appointment and payments recorded against them, with coupons for the discounts a practice offers.",
     },
     {
       type: "image",
@@ -283,7 +273,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Roles and teams" },
     {
       type: "paragraph",
-      text: "Roles and teams for the structure of a practice, from a single clinic to a multi-location group: what each role sees and does, teams that map to locations or specialties, and permissions that reach into features, down to who can view, edit or share a note.",
+      text: "Roles and teams scale from a single clinic to a multi-location group, with teams that map to locations or specialties. Permissions reach into features, down to who can view, edit or share a note.",
     },
     {
       type: "image",
@@ -295,7 +285,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Dashboards" },
     {
       type: "paragraph",
-      text: "Each role has its own dashboard, and each person can customise theirs. I wrote every dashboard first as responsibilities and user stories, then as content. The admin sees the month: new patients, appointments and no-shows against the previous month, overdue payments, revenue by location and service. The manager sees the clinic's day: appointments by state, staff online or in a call, patients in the waiting room, patients with repeated no-shows. The practitioner sees their own day: appointments, draft and unfinished notes, patients waiting to be admitted.",
+      text: "I wrote every dashboard first as responsibilities and user stories, then as content. The admin sees the month: new patients, appointments and no-shows against the previous one, overdue payments, revenue by location and service. The manager sees the clinic's day: appointments by state, who is in a call, who is waiting, who keeps missing appointments. The practitioner sees their own day: appointments, unfinished notes, patients waiting to be admitted. Each person can customise theirs.",
     },
     {
       type: "image",
@@ -307,11 +297,7 @@ export const upvioPlatform: CaseStudy = {
     { type: "subheading", text: "Onboarding" },
     {
       type: "paragraph",
-      text: "There was no onboarding: a new practice landed in an empty account and had to find its own way through setup. I designed the onboarding strategy around one goal: configure as much of the platform as possible in as few steps as possible, with the least friction for the customer.",
-    },
-    {
-      type: "paragraph",
-      text: "The practice makes the product its own from the first steps, down to its brand colour applied across the app. A guided setup, with gamification to keep it moving, takes them through the rest, and they can skip it at any moment.",
+      text: "A new practice used to land in an empty account. I designed onboarding around one goal: configure as much of the platform as possible in as few steps as possible. The practice makes the product its own from the start, down to its brand colour across the app, and a guided setup with gamification takes it through the rest, skippable at any moment.",
     },
     {
       type: "image",
