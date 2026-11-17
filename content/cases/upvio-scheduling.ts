@@ -12,8 +12,6 @@ export const upvioScheduling: CaseStudy = {
   },
   stats: [
     { value: "≈0", label: "Configuration errors after the new model shipped" },
-    { value: "[X]%", label: "Faster setup of a new service", placeholder: true },
-    { value: "[X]%", label: "Less support time spent on configuration", placeholder: true },
   ],
   blocks: [
     { type: "section", label: "01 — Context", title: "Scheduling without a model" },
@@ -36,6 +34,11 @@ export const upvioScheduling: CaseStudy = {
         "Schedules with no qualified staff available, time slots that could never be filled",
         "Bookings that failed at the last moment, frustrating patients and the support team",
       ],
+    },
+    {
+      type: "diagram",
+      id: "scheduling-before-after",
+      caption: "Before, each entity stood on its own; after, everything hangs from the location",
     },
     {
       type: "paragraph",
@@ -74,6 +77,10 @@ export const upvioScheduling: CaseStudy = {
       type: "paragraph",
       text: "Services exist only at specific locations, staff work only at specific locations, and schedules belong to a location and can be narrowed by each person's own availability.",
     },
+    {
+      type: "paragraph",
+      text: "Telehealth was part of the model from the first version, as a location of its own. Online consultations follow the same rules as in-person ones: which services are offered online, who is qualified to deliver them, and on what schedule. It also brought a layer of complexity no physical location has: time zones.",
+    },
 
     { type: "section", label: "05 — Invariants", title: "What the system refuses" },
     {
@@ -83,10 +90,15 @@ export const upvioScheduling: CaseStudy = {
     {
       type: "list",
       items: [
-        "A service can be booked at a location only if it's offered there, has qualified staff there, and has a schedule long enough for it",
-        "A staff member can be assigned to a booking only if they work at that location, are qualified for that service, and are available at that time",
-        "A schedule is valid only if it belongs to an existing location and doesn't overlap existing bookings",
+        "A service can be booked at a location only if it's offered there, has qualified staff there, and there is enough free time for its time block",
+        "A staff member can be assigned to a booking only if they work at that location, are qualified for that service, and are free at that time: not blocked, not already booked",
+        "A staff member's schedule is valid only if it sits inside the location's schedule",
       ],
+    },
+    {
+      type: "diagram",
+      id: "domain-rules",
+      caption: "Every way in passes through the same rules: invalid data is refused before it is saved",
     },
 
     { type: "section", label: "06 — Guided configuration", title: "Only valid options" },
@@ -97,7 +109,7 @@ export const upvioScheduling: CaseStudy = {
     { type: "subheading", text: "Locations" },
     {
       type: "paragraph",
-      text: "Setup starts where the model does. A location holds its own schedule, the services it offers and the people who work there, so a clinic with several sites configures each one in its own context instead of in lists that never meet. Telehealth is a location too, with complexity of its own, starting with time zones.",
+      text: "Setup starts where the model does. A location holds its own schedule, the services it offers and the people who work there, so a clinic with several sites configures each one in its own context instead of in lists that never meet.",
     },
     {
       type: "image",
@@ -109,7 +121,11 @@ export const upvioScheduling: CaseStudy = {
     { type: "subheading", text: "Services" },
     {
       type: "paragraph",
-      text: "When someone creates a service and picks its locations, the system filters the staff who work there and suggests schedules. The user confirms or adjusts. A service with no location, or with nobody qualified to deliver it, can no longer be created.",
+      text: "When someone creates a service and picks its locations, the system filters the staff who work there and suggests schedules. The user confirms or adjusts. Each service has its own time block, and a service can come in variants: a psychotherapy session, for example, as a 120-minute long session, a 50-minute standard one and a 20-minute check-up. A service with no location, or with nobody qualified to deliver it, can no longer be created.",
+    },
+    {
+      type: "paragraph",
+      text: "Telehealth appears here as an option of the service, because that is how clinics think about it: this consultation can also happen online. Underneath, the option links the service to the telehealth location, so online consultations keep their own schedule, staff and rules.",
     },
     {
       type: "image",
@@ -128,16 +144,25 @@ export const upvioScheduling: CaseStudy = {
       text: "Staff can also set their own availability, unless a manager has locked it, which happens mostly with telehealth. That matters in a practice where external practitioners update their availability every month.",
     },
     {
+      type: "paragraph",
+      text: "Telehealth needed one more rule. A clinic has a time zone because it sits somewhere; an online consultation doesn't, since the practitioner and the patient can be anywhere. Working it through with the engineers, we settled on taking the time zone from the practitioner: telehealth availability is set in their own time zone, not the location's.",
+    },
+    {
       type: "image",
       alt: "Calendar with a staff member's availability set as time slots within the location's schedule",
       caption: "Staff availability: time slots set in the calendar",
       width: "text",
       source: "figma",
     },
+    {
+      type: "diagram",
+      id: "telehealth-layers",
+      caption: "Telehealth: an option of the service in the interface, a location in the model, with the practitioner's time zone",
+    },
     { type: "subheading", text: "Booking" },
     {
       type: "paragraph",
-      text: "Booking works the same way. Pick a service, and only the locations that offer it appear. Pick a location, and only its available schedules and qualified staff remain. A staff member is then assigned automatically, or chosen from the valid ones. Showing only valid options did more for configuration errors than any validation message could.",
+      text: "Booking works the same way. Pick a service, and only the locations that offer it appear. Pick a location, and only its available schedules and qualified staff remain. Only times with enough free time for the service's block appear, around the time staff have blocked and the appointments already booked. A staff member is then assigned automatically, or chosen from the valid ones. Showing only valid options did more for configuration errors than any validation message could.",
     },
     {
       type: "image",

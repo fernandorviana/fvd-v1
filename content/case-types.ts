@@ -4,6 +4,9 @@ export type DiagramId =
   | "platform-map"
   | "appointment-lifecycle"
   | "service-location-staff"
+  | "scheduling-before-after"
+  | "domain-rules"
+  | "telehealth-layers"
   | "ai-consultation"
   | "documentation-flow";
 
